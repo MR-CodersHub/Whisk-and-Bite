@@ -1555,6 +1555,8 @@ select.form-control {
    collection grid and 4-col stat rows to phone-friendly shapes.
    Attribute selectors reach inline styles without HTML edits. */
 @media (max-width: 640px) {
+  /* Slider arrows would sit on top of the hero text — dots + swipe remain */
+  .slider-arrows { display: none; }
   div[style*="grid-template-columns:1fr 1fr"] {
     grid-template-columns: 1fr !important;
     gap: 2rem !important;
@@ -1620,38 +1622,39 @@ select.form-control {
   padding: 0 var(--sp-8);
 }
 
-/* ─── Dark-hero pages: navbar stays dark when scrolled ────────
-   On photo heroes a white bar reads as a gap above the content,
-   so dark-hero pages keep the cocoa surface in both themes. */
-[data-theme][data-nav="dark"] .navbar.scrolled {
-  background: rgba(43,29,32,0.94);
+/* ─── Solid navbar everywhere ────────────────────────────────
+   No transparent state: the bar keeps its surface from the top
+   of the page in both themes, with matching content colours. */
+.navbar {
+  background: rgba(255,255,255,0.96);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow: var(--shadow-md);
 }
-[data-theme][data-nav="dark"] .navbar.scrolled .logo { color: white; }
-[data-theme][data-nav="dark"] .navbar.scrolled .logo-tagline { opacity: 0.72; }
-[data-theme][data-nav="dark"] .navbar.scrolled .nav-link { color: rgba(255,255,255,0.9); }
-[data-theme][data-nav="dark"] .navbar.scrolled .nav-link:hover,
-[data-theme][data-nav="dark"] .navbar.scrolled .nav-link.active { color: var(--champagne-lt); }
-[data-theme][data-nav="dark"] .navbar.scrolled .hamburger span { background: white; }
-[data-theme][data-nav="dark"] .navbar.scrolled .ctrl-btn {
-  background: rgba(45,30,36,0.55);
-  border-color: rgba(255,255,255,0.35);
-  color: white;
+[data-theme="dark"] .navbar { background: rgba(26,17,24,0.96); }
+[data-theme="light"][data-nav="dark"] .navbar .logo { color: var(--raspberry); }
+[data-theme="light"][data-nav="dark"] .navbar .logo-tagline { opacity: 0.62; }
+[data-theme="light"][data-nav="dark"] .navbar .nav-link { color: var(--text); }
+[data-theme="light"][data-nav="dark"] .navbar .nav-link:hover,
+[data-theme="light"][data-nav="dark"] .navbar .nav-link.active { color: var(--raspberry); }
+[data-theme="light"][data-nav="dark"] .navbar .hamburger span { background: var(--text); }
+[data-theme="light"][data-nav="dark"] .navbar .ctrl-btn {
+  background: var(--bg-card);
+  border-color: var(--border);
+  color: var(--text);
 }
-[data-theme][data-nav="dark"] .navbar.scrolled .ctrl-btn:hover {
+[data-theme="light"][data-nav="dark"] .navbar .ctrl-btn:hover {
   background: var(--raspberry);
   border-color: var(--raspberry);
-  color: white;
+  color: var(--white);
 }
-[data-theme][data-nav="dark"] .navbar.scrolled .btn-secondary {
-  background: rgba(45,30,36,0.55);
-  border-color: rgba(255,255,255,0.35);
-  color: white;
+[data-theme="light"][data-nav="dark"] .navbar .btn-secondary {
+  background: transparent;
+  border-color: var(--raspberry);
+  color: var(--raspberry);
 }
-[data-theme][data-nav="dark"] .navbar.scrolled .btn-secondary:hover {
-  background: white;
-  border-color: white;
-  color: var(--cocoa);
+[data-theme="light"][data-nav="dark"] .navbar .btn-secondary:hover {
+  background: var(--raspberry);
+  border-color: var(--raspberry);
+  color: var(--white);
 }
