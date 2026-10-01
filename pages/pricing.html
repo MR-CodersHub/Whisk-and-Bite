@@ -1,0 +1,557 @@
+﻿﻿﻿﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" data-nav="dark" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Whisk &amp; Bite Pricing — Transparent pricing for cake pops, brownie bites, mini cheesecakes, truffles and custom event packages. Tiny Treats, Big Moments." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Whisk & Bite" />
+  <meta property="og:title" content="Pricing | Whisk &amp; Bite — Tiny Treats, Big Moments" />
+  <meta property="og:description" content="Whisk &amp; Bite Pricing — Transparent pricing for cake pops, brownie bites, mini cheesecakes, truffles and custom event packages. Tiny Treats, Big Moments." />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pricing | Whisk &amp; Bite — Tiny Treats, Big Moments" />
+  <meta name="twitter:description" content="Whisk &amp; Bite Pricing — Transparent pricing for cake pops, brownie bites, mini cheesecakes, truffles and custom event packages. Tiny Treats, Big Moments." />
+  <meta name="theme-color" content="#B83B68" />
+  <title>Pricing | Whisk &amp; Bite — Tiny Treats, Big Moments</title>
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../css/main.css?v=3" />
+  <style>
+    .pricing-hero {
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      padding: calc(var(--nav-height) + 4rem) 0 5rem;
+      background: url('https://i.pinimg.com/736x/bc/09/d1/bc09d16f0d7569c4a1c7d8f5544f9707.jpg') center / cover no-repeat;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .pricing-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(43,29,32,0.55) 0%, rgba(43,29,32,0.72) 60%, rgba(43,29,32,0.94) 100%);
+      z-index: 0;
+    }
+
+    .pricing-hero::before {
+      content: '';
+      position: absolute;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(184,59,104,0.1) 0%, transparent 70%);
+      top: -100px; right: -100px;
+      z-index: 1;
+    }
+
+    .pricing-hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--bg-card);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+    }
+
+    .comparison-table th {
+      padding: 1.5rem;
+      background: var(--cocoa);
+      color: var(--champagne);
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .comparison-table th:first-child { text-align: left; }
+
+    .comparison-table td {
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.9rem;
+      color: var(--text);
+      text-align: center;
+    }
+
+    .comparison-table td:first-child { text-align: left; font-weight: 600; color: var(--text); }
+
+    .comparison-table tr:last-child td { border-bottom: none; }
+    .comparison-table tr:hover td { background: var(--bg-secondary); }
+
+    .check { color: var(--pistachio-dk); font-weight: 700; font-size: 1.1rem; }
+    .cross  { color: var(--mid-gray); font-size: 1.1rem; }
+    .highlight-col { background: rgba(184,59,104,0.04); }
+
+    .addon-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-card);
+      padding: 1.75rem;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-card);
+      transition: all var(--dur-normal);
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+    }
+
+    .addon-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: var(--raspberry); }
+
+    .addon-icon {
+      width: 52px; height: 52px; flex-shrink: 0;
+      border-radius: var(--radius-lg);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem;
+    }
+
+    .price-toggle {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      justify-content: center;
+      margin-bottom: 3rem;
+    }
+
+    .toggle-switch {
+      width: 56px; height: 28px;
+      background: var(--border);
+      border-radius: 14px;
+      position: relative;
+      cursor: pointer;
+      transition: background var(--dur-normal);
+    }
+
+    .toggle-switch.active { background: var(--raspberry); }
+
+    .toggle-knob {
+      position: absolute;
+      top: 3px; left: 3px;
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      transition: transform var(--dur-normal) var(--ease-spring);
+    }
+
+    .toggle-switch.active .toggle-knob { transform: translateX(28px); }
+
+    @media (max-width: 768px) {
+      .comparison-table { font-size: 0.8rem; }
+      .comparison-table th, .comparison-table td { padding: 0.75rem; }
+    }
+  </style>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <!-- ════════════════════════════ -->
+  <!-- SECTION 1: PRICING HERO -->
+  <!-- ════════════════════════════ -->
+  <section class="pricing-hero" aria-labelledby="pricing-hero-title">
+    <div class="container" style="position:relative;z-index:1;">
+        <p class="hero-eyebrow" style="justify-content:center;animation-delay:0.2s;color:var(--champagne-lt);">Transparent Pricing</p>
+        <h1 id="pricing-hero-title" class="hero-title" style="animation-delay:0.4s;color:white;max-width:700px;margin:0 auto 1.5rem;font-size:clamp(2.5rem,5vw,4.5rem);">Simple, <em>Honest</em><br/>Pricing</h1>
+        <p style="color:rgba(255,255,255,0.75);max-width:520px;margin:0 auto;font-size:1.1rem;line-height:1.7;animation:fadeUp 0.8s ease 0.6s both;">No hidden fees, no nasty surprises. Just beautiful desserts at fair prices.</p>
+      </div>
+    </section>
+
+  <!-- Breadcrumb -->
+  <div style="background:var(--bg-secondary);padding:1rem 0;border-bottom:1px solid var(--border);">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol style="display:flex;gap:0.5rem;font-size:0.8rem;color:var(--text-muted);list-style:none;">
+          <li><a href="../index.html" style="color:var(--raspberry);">Home</a></li>
+          <li>/</li>
+          <li aria-current="page">Pricing</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════ -->
+  <!-- SECTION 2: MAIN PRICING PLANS -->
+  <!-- ════════════════════════════ -->
+  <section class="section" aria-labelledby="packages-title">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="eyebrow center">Event Packages</div>
+        <h2 class="section-title" id="packages-title">Choose Your <em>Package</em></h2>
+        <p class="section-subtitle">All packages include premium ingredients, luxury packaging, and our quality guarantee.</p>
+      </div>
+
+      <!-- Toggle -->
+      <div class="price-toggle reveal" role="group" aria-label="Pricing period toggle">
+        <span style="font-weight:600;color:var(--text);">Per Item</span>
+        <div class="toggle-switch" id="price-toggle" role="switch" aria-checked="false" tabindex="0">
+          <div class="toggle-knob"></div>
+        </div>
+        <span style="font-weight:600;color:var(--text);">Package <span class="badge badge-raspberry" style="vertical-align:middle;">Save 15%</span></span>
+      </div>
+
+      <!-- Pricing Cards -->
+      <div class="grid-3" style="align-items:start;">
+        <!-- Starter -->
+        <div class="pricing-card reveal reveal-delay-1" aria-label="Starter package">
+          <h3 class="pricing-name">Sweet Start</h3>
+          <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:1rem;">Perfect for intimate gatherings & personal gifting.</p>
+          <div class="pricing-price" id="price-starter">$48 <span class="pricing-period">/dozen</span></div>
+          <ul class="pricing-features">
+            <li class="pricing-feature">
+              <div class="pricing-feature-icon check-icon">✓</div>
+              12 Cake Pops of your choice
+            </li>
+            <li class="pricing-feature">
+              <div class="pricing-feature-icon check-icon">✓</div>
+              3 flavour options
+            </li>
+            <li class="pricing-feature">
+              <div class="pricing-feature-icon check-icon">✓</div>
+              Standard chocolate coating
+            </li>
+            <li class="pricing-feature">
+              <div class="pricing-feature-icon check-icon">✓</div>
+              Branded gift box included
+            </li>
+            <li class="pricing-feature">
+              <div class="pricing-feature-icon" style="background:rgba(200,200,200,0.2);color:var(--mid-gray);">✗</div>
+              <span style="color:var(--mid-gray);">Custom design</span>
+            </li>
+            <li class="pricing-feature">
+              <div class="pricing-feature-icon" style="background:rgba(200,200,200,0.2);color:var(--mid-gray);">✗</div>
+              <span style="color:var(--mid-gray);">Gold leaf finish</span>
+            </li>
+          </ul>
+          <a href="contact.html" class="btn btn-secondary w-full" style="justify-content:center;">Get Started →</a>
+        </div>
+
+        <!-- Most Popular -->
+        <div class="pricing-card featured reveal reveal-delay-2" aria-label="Celebration package - most popular">
+          <div class="pricing-badge">Most Popular ✦</div>
+          <h3 class="pricing-name">Celebration Box</h3>
+          <p style="font-size:0.9rem;color:rgba(255,255,255,0.75);margin-bottom:1rem;">Our signature event package for birthdays & weddings.</p>
+          <div class="pricing-price" id="price-celebration">$189 <span class="pricing-period">/48 pieces</span></div>
+          <ul class="pricing-features">
+            <li class="pricing-feature">
+              <div class="pricing-feature-icon check-icon">✓</div>
+              24 Cake Pops + 24 Brownie Bites
+            </li>
+            <li class="pricing-feature">
+              <div class="pricing-feature-icon check-icon">✓</div>
+              6 flavour combinations
+            </li>
+            <li class="pricing-feature">
+              <div class="pricing-feature-icon check-icon">✓</div>
+              Gold dust & coloured coatings
+            </li>
+            <li class="pricing-feature">
+              <div class="pricing-feature-icon check-icon">✓</div>
+              Custom event theming
+            </li>
+            <li class="pricing-feature">
+              <div class="pricing-feature-icon check-icon">✓</div>
+              Luxury ribbon-tied boxes
+            </li>
+            <li class="pricing-feature">
+              <div class="pricing-feature-icon check-icon">✓</div>
+              Design mockup included
+            </li>
+          </ul>
+          <a href="contact.html" class="btn btn-champagne w-full" style="justify-content:center;">Book This Package →</a>
+        </div>
+
+        <!-- Premium -->
+        <div class="pricing-card reveal reveal-delay-3" aria-label="Grand event package">
+          <h3 class="pricing-name">Grand Event</h3>
+          <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:1rem;">Full-scale event catering with premium everything.</p>
+          <div class="pricing-price" id="price-grand">$489 <span class="pricing-period">/150 pieces</span></div>
+          <ul class="pricing-features">
+            <li class="pricing-feature">
+              <div class="pricing-feature-icon check-icon">✓</div>
+              Full assortment mix (your choice)
+            </li>
+            <li class="pricing-feature">
+              <div class="pricing-feature-icon check-icon">✓</div>
+              Unlimited flavour options
+            </li>
+            <li class="pricing-feature">
+              <div class="pricing-feature-icon check-icon">✓</div>
+              Hand-painted gold leaf designs
+            </li>
+            <li class="pricing-feature">
+              <div class="pricing-feature-icon check-icon">✓</div>
+              Dessert table setup included
+            </li>
+            <li class="pricing-feature">
+              <div class="pricing-feature-icon check-icon">✓</div>
+              Personal stylist consultation
+            </li>
+            <li class="pricing-feature">
+              <div class="pricing-feature-icon check-icon">✓</div>
+              Priority 48hr production
+            </li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary w-full" style="justify-content:center;">Get a Quote →</a>
+        </div>
+      </div>
+
+      <p style="text-align:center;margin-top:2rem;font-size:0.85rem;color:var(--text-muted);">All prices shown in USD. Delivery fees may apply based on location. <a href="contact.html" style="color:var(--raspberry);">Contact us</a> for a custom quote.</p>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════ -->
+  <!-- SECTION 3: INDIVIDUAL PRICING -->
+  <!-- ════════════════════════════ -->
+  <section class="section" style="background:var(--bg-secondary);" aria-labelledby="individual-pricing-title">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="eyebrow center">À La Carte</div>
+        <h2 class="section-title" id="individual-pricing-title">Individual <em>Item</em><br/>Pricing</h2>
+        <p class="section-subtitle">Mix and match your order from our full range. Volume discounts apply automatically.</p>
+      </div>
+
+      <div class="reveal" style="overflow-x:auto;">
+        <table class="comparison-table" aria-label="Product pricing breakdown">
+          <thead>
+            <tr>
+              <th scope="col">Product</th>
+              <th scope="col">Per Unit</th>
+              <th scope="col">Dozen (12)</th>
+              <th scope="col">24 Units</th>
+              <th scope="col" style="background:var(--raspberry);color:white;">50+ Units</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cake-slice"></use></svg> Signature Cake Pops</td>
+              <td>$3.50</td>
+              <td>$39.00 <small style="color:var(--pistachio-dk);">Save $3</small></td>
+              <td>$72.00 <small style="color:var(--pistachio-dk);">Save $12</small></td>
+              <td class="highlight-col" style="font-weight:700;color:var(--raspberry);">$2.80 <small style="color:var(--pistachio-dk);">Save 20%</small></td>
+            </tr>
+            <tr>
+              <td><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-palette"></use></svg> Custom Design Pops</td>
+              <td>$6.00</td>
+              <td>$66.00</td>
+              <td>$128.00</td>
+              <td class="highlight-col" style="font-weight:700;color:var(--raspberry);">$4.80</td>
+            </tr>
+            <tr>
+              <td><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chocolate"></use></svg> Brownie Bites</td>
+              <td>$2.80</td>
+              <td>$30.00</td>
+              <td>$56.00</td>
+              <td class="highlight-col" style="font-weight:700;color:var(--raspberry);">$2.20</td>
+            </tr>
+            <tr>
+              <td><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-pudding"></use></svg> Mini Cheesecakes</td>
+              <td>$4.20</td>
+              <td>$46.00</td>
+              <td>$88.00</td>
+              <td class="highlight-col" style="font-weight:700;color:var(--raspberry);">$3.40</td>
+            </tr>
+            <tr>
+              <td><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chocolate"></use></svg> Chocolate Truffles</td>
+              <td>$4.50</td>
+              <td>$50.00</td>
+              <td>$96.00</td>
+              <td class="highlight-col" style="font-weight:700;color:var(--raspberry);">$3.60</td>
+            </tr>
+            <tr>
+              <td><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-gift"></use></svg> Gift Box (Assorted 12)</td>
+              <td>—</td>
+              <td>$58.00</td>
+              <td>$108.00</td>
+              <td class="highlight-col" style="font-weight:700;color:var(--raspberry);">$4.20/pc</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════ -->
+  <!-- SECTION 4: ADD-ONS -->
+  <!-- ════════════════════════════ -->
+  <section class="section" aria-labelledby="addons-title">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="eyebrow center">Elevate Your Order</div>
+        <h2 class="section-title" id="addons-title">Premium <em>Add-Ons</em></h2>
+        <p class="section-subtitle">Take your dessert experience to the next level with our bespoke extras.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="addon-card reveal reveal-delay-1" aria-label="Gold leaf finish add-on">
+          <div class="addon-icon" style="background:rgba(214,180,106,0.2);"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-sparkles"></use></svg></div>
+          <div>
+            <h4 style="font-weight:700;margin-bottom:0.4rem;">Gold Leaf Finish</h4>
+            <p style="font-size:0.875rem;color:var(--text-muted);margin-bottom:0.75rem;">Real 24K edible gold leaf applied by hand to each piece for ultimate luxury.</p>
+            <div style="font-family:var(--font-display);font-weight:700;color:var(--raspberry);">+ $1.50/piece</div>
+          </div>
+        </div>
+
+        <div class="addon-card reveal reveal-delay-2" aria-label="Custom hand-painted design add-on">
+          <div class="addon-icon" style="background:rgba(184,59,104,0.12);"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-palette"></use></svg></div>
+          <div>
+            <h4 style="font-weight:700;margin-bottom:0.4rem;">Hand-Painted Design</h4>
+            <p style="font-size:0.875rem;color:var(--text-muted);margin-bottom:0.75rem;">Monograms, florals, logos or custom artwork painted with food-safe edible colours.</p>
+            <div style="font-family:var(--font-display);font-weight:700;color:var(--raspberry);">+ $2.50/piece</div>
+          </div>
+        </div>
+
+        <div class="addon-card reveal reveal-delay-3" aria-label="Premium packaging add-on">
+          <div class="addon-icon" style="background:rgba(168,185,138,0.2);"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-package"></use></svg></div>
+          <div>
+            <h4 style="font-weight:700;margin-bottom:0.4rem;">Signature Gift Packaging</h4>
+            <p style="font-size:0.875rem;color:var(--text-muted);margin-bottom:0.75rem;">Pink & gold box with wax seal, satin ribbon, personalised card and tissue wrap.</p>
+            <div style="font-family:var(--font-display);font-weight:700;color:var(--raspberry);">+ $8.00/box</div>
+          </div>
+        </div>
+
+        <div class="addon-card reveal reveal-delay-4" aria-label="Express delivery add-on">
+          <div class="addon-icon" style="background:rgba(243,169,130,0.2);"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-rocket"></use></svg></div>
+          <div>
+            <h4 style="font-weight:700;margin-bottom:0.4rem;">Express Production</h4>
+            <p style="font-size:0.875rem;color:var(--text-muted);margin-bottom:0.75rem;">Need it in 24–48 hours? Rush production available for most standard orders.</p>
+            <div style="font-family:var(--font-display);font-weight:700;color:var(--raspberry);">+ $25 flat fee</div>
+          </div>
+        </div>
+
+        <div class="addon-card reveal reveal-delay-5" aria-label="Dessert table setup add-on">
+          <div class="addon-icon" style="background:rgba(214,180,106,0.2);"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-magic"></use></svg></div>
+          <div>
+            <h4 style="font-weight:700;margin-bottom:0.4rem;">Dessert Table Setup</h4>
+            <p style="font-size:0.875rem;color:var(--text-muted);margin-bottom:0.75rem;">On-location dessert table styling, display stands and decor. Available in select areas.</p>
+            <div style="font-family:var(--font-display);font-weight:700;color:var(--raspberry);">From $150</div>
+          </div>
+        </div>
+
+        <div class="addon-card reveal reveal-delay-6" aria-label="Custom flavour development add-on">
+          <div class="addon-icon" style="background:rgba(184,59,104,0.12);"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-test-tube"></use></svg></div>
+          <div>
+            <h4 style="font-weight:700;margin-bottom:0.4rem;">Custom Flavour Development</h4>
+            <p style="font-size:0.875rem;color:var(--text-muted);margin-bottom:0.75rem;">Work with our chef to develop a completely unique flavour exclusive to your event.</p>
+            <div style="font-family:var(--font-display);font-weight:700;color:var(--raspberry);">POA</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════ -->
+  <!-- SECTION 5: GUARANTEE + FAQ -->
+  <!-- ════════════════════════════ -->
+  <section class="section" style="background:var(--bg-secondary);" aria-labelledby="guarantee-title">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;">
+        <!-- Guarantee -->
+        <div class="reveal-left">
+          <div class="eyebrow no-line">Our Promise</div>
+          <h2 class="section-title" id="guarantee-title">The Whisk & Bite<br/><em>Quality Guarantee</em></h2>
+          <div style="display:flex;flex-direction:column;gap:1.25rem;margin-top:1.5rem;">
+            <div style="display:flex;gap:1rem;padding:1.25rem;background:var(--bg-card);border-radius:16px;border:1px solid var(--border);">
+              <span style="font-size:1.8rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-rosette"></use></svg></span>
+              <div>
+                <div style="font-weight:700;margin-bottom:0.3rem;">100% Satisfaction</div>
+                <p style="font-size:0.875rem;color:var(--text-muted);">Not happy? We'll remake your order or provide a full refund. No questions asked.</p>
+              </div>
+            </div>
+            <div style="display:flex;gap:1rem;padding:1.25rem;background:var(--bg-card);border-radius:16px;border:1px solid var(--border);">
+              <span style="font-size:1.8rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-leaf"></use></svg></span>
+              <div>
+                <div style="font-weight:700;margin-bottom:0.3rem;">Fresh Every Time</div>
+                <p style="font-size:0.875rem;color:var(--text-muted);">All orders are made fresh on the day of dispatch. Never frozen, never pre-made.</p>
+              </div>
+            </div>
+            <div style="display:flex;gap:1rem;padding:1.25rem;background:var(--bg-card);border-radius:16px;border:1px solid var(--border);">
+              <span style="font-size:1.8rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-lock"></use></svg></span>
+              <div>
+                <div style="font-weight:700;margin-bottom:0.3rem;">Secure Payments</div>
+                <p style="font-size:0.875rem;color:var(--text-muted);">We accept all major cards, PayPal, and bank transfer. Deposits secured and protected.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pricing FAQ -->
+        <div class="reveal-right">
+          <div class="eyebrow no-line">Pricing FAQ</div>
+          <h3 style="font-size:1.8rem;font-weight:800;margin-bottom:1.5rem;">Common <em>Questions</em></h3>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Do you charge for packaging? <span class="faq-icon">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner">Basic branded boxes are included with all orders. Upgraded signature gift packaging (wax seal, ribbon, tissue) is available as an add-on from $8 per box.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">What payment methods do you accept? <span class="faq-icon">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner">We accept Visa, Mastercard, American Express, PayPal, and bank transfer. A 50% deposit is required to confirm your order, with the balance due before dispatch.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Are there delivery charges? <span class="faq-icon">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner">Local delivery (within 30km) is $15 flat. National shipping starts from $25 for temperature-controlled overnight service. Orders over $200 get free local delivery.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Can I get a custom quote for large events? <span class="faq-icon">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner">Absolutely! For orders over 200 pieces or unique events, we provide custom quotes. These often include significant volume discounts. Contact us directly.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════ -->
+  <!-- SECTION 6: CTA -->
+  <!-- ════════════════════════════ -->
+  <section style="padding:5rem 0;background:linear-gradient(135deg,var(--cocoa),#4a2d34);text-align:center;" aria-labelledby="pricing-cta-title">
+    <div class="container">
+      <div class="reveal">
+        <div style="font-size:4rem;margin-bottom:1rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-gift"></use></svg></div>
+        <h2 class="section-title" id="pricing-cta-title" style="color:white;margin-bottom:1rem;">Ready to Place<br/><em style="color:var(--champagne-lt);">Your Order?</em></h2>
+        <p style="color:rgba(255,255,255,0.75);max-width:500px;margin:0 auto 2.5rem;font-size:1rem;line-height:1.7;">Fill out our simple enquiry form and we'll come back to you within 24 hours with a detailed proposal.</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+          <a href="contact.html" class="btn btn-champagne btn-xl">Start Your Order</a>
+          <a href="services.html" class="btn btn-ghost btn-xl">View All Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="../js/icons.js?v=3"></script>
+  <script src="../js/components.js?v=3"></script>
+  <script src="../js/main.js?v=3"></script>
+  <script>
+    // Price toggle functionality
+    const toggle = document.getElementById('price-toggle');
+    if (toggle) {
+      const prices = {
+        starter:     ['$48 <span class="pricing-period">/dozen</span>', '$40 <span class="pricing-period">/dozen (Save 17%)</span>'],
+        celebration: ['$189 <span class="pricing-period">/48 pieces</span>', '$160 <span class="pricing-period">/48 pieces (Save 15%)</span>'],
+        grand:       ['$489 <span class="pricing-period">/150 pieces</span>', '$415 <span class="pricing-period">/150 pieces (Save 15%)</span>']
+      };
+      let isPackage = false;
+
+      toggle.addEventListener('click', () => {
+        isPackage = !isPackage;
+        toggle.classList.toggle('active', isPackage);
+        toggle.setAttribute('aria-checked', isPackage);
+        const idx = isPackage ? 1 : 0;
+        document.getElementById('price-starter').innerHTML = prices.starter[idx];
+        document.getElementById('price-celebration').innerHTML = prices.celebration[idx];
+        document.getElementById('price-grand').innerHTML = prices.grand[idx];
+      });
+
+      toggle.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle.click(); }
+      });
+    }
+  </script>
+</body>
+</html>

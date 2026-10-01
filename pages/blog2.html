@@ -1,0 +1,454 @@
+﻿﻿﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dessert tips, flavor guides, baking secrets, and behind-the-scenes from our artisan studio. Tiny Treats, Big Moments." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Whisk & Bite" />
+  <meta property="og:title" content="Blog – Page 2 | Whisk &amp; Bite — Tiny Treats, Big Moments" />
+  <meta property="og:description" content="Dessert tips, flavor guides, baking secrets, and behind-the-scenes from our artisan studio. Tiny Treats, Big Moments." />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Blog – Page 2 | Whisk &amp; Bite — Tiny Treats, Big Moments" />
+  <meta name="twitter:description" content="Dessert tips, flavor guides, baking secrets, and behind-the-scenes from our artisan studio. Tiny Treats, Big Moments." />
+  <meta name="theme-color" content="#B83B68" />
+  <title>Blog – Page 2 | Whisk &amp; Bite — Tiny Treats, Big Moments</title>
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../css/main.css?v=3" />
+  <style>
+    .blog-hero {
+      padding: calc(var(--nav-height) + 4rem) 0 3rem;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .featured-post {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      min-height: 300px;
+      background: var(--bg-card);
+      border-radius: var(--radius-2xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+      margin-bottom: 4rem;
+      border: 1px solid var(--border);
+      transition: all var(--dur-normal) var(--ease-smooth);
+    }
+
+    .featured-post:hover { transform: translateY(-4px); box-shadow: 0 24px 80px rgba(43,29,32,0.2); }
+
+    /* Image column never decides the row height — it just fills it.
+       (Before: height:100% inside an auto-height box fell back to the
+       photo's huge natural height and blew the card up.) */
+    .featured-post > div:first-child { position: relative; min-height: 280px; }
+
+    .featured-post-img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s var(--ease-smooth);
+    }
+
+    .featured-post:hover .featured-post-img { transform: scale(1.04); }
+
+    .featured-post-body {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .featured-post .post-meta { margin-bottom: 0.75rem; }
+
+    .post-meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .post-category {
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--raspberry);
+      padding: 0.2rem 0.75rem;
+      background: rgba(184,59,104,0.1);
+      border-radius: 9999px;
+    }
+
+    .blog-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      border: 1px solid var(--border);
+      transition: all var(--dur-normal) var(--ease-smooth);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-xl); }
+
+    .blog-card-img-wrap { overflow: hidden; flex-shrink: 0; }
+    .blog-card-img {
+      width: 100%; aspect-ratio: 4/3;
+      object-fit: cover;
+      transition: transform 0.6s var(--ease-smooth);
+    }
+    .blog-card:hover .blog-card-img { transform: scale(1.06); }
+
+    .blog-card-body { padding: 1.75rem; flex: 1; display: flex; flex-direction: column; }
+    .blog-card-title {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin: 0.75rem 0;
+      line-height: 1.4;
+      color: var(--text);
+      transition: color var(--dur-fast);
+    }
+    .blog-card:hover .blog-card-title { color: var(--raspberry); }
+
+    .read-more {
+      margin-top: auto;
+      padding-top: 1.25rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--raspberry);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      border-top: 1px solid var(--border);
+      transition: gap var(--dur-fast);
+    }
+    .blog-card:hover .read-more { gap: 1rem; }
+
+    .sidebar-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-card);
+      padding: 1.75rem;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-card);
+      margin-bottom: 2rem;
+    }
+
+    .sidebar-card h3 {
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--raspberry);
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .sidebar-post {
+      display: flex;
+      gap: 1rem;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+      transition: all var(--dur-fast);
+    }
+    .sidebar-post:last-child { border-bottom: none; }
+    .sidebar-post:hover { padding-left: 0.5rem; }
+
+    .sidebar-post-img {
+      width: 64px; height: 64px; flex-shrink: 0;
+      border-radius: var(--radius-md);
+      object-fit: cover;
+    }
+
+    .tag-cloud { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+    .tag {
+      padding: 0.3rem 0.9rem;
+      border-radius: 9999px;
+      border: 1.5px solid var(--border);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all var(--dur-fast);
+    }
+    .tag:hover { border-color: var(--raspberry); color: var(--raspberry); }
+
+    @media (max-width: 1024px) {
+      .featured-post { grid-template-columns: 1fr; min-height: auto; }
+      .featured-post > div:first-child { min-height: 0; height: 220px; }
+      .featured-post-body { padding: 1.5rem; }
+    }
+
+    @media (max-width: 768px) {
+      .blog-layout { display: block; }
+      .blog-sidebar { margin-top: 3rem; }
+    }
+  </style>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <!-- ════════════════════════════ -->
+  <!-- SECTION 1: BLOG HERO -->
+  <!-- ════════════════════════════ -->
+  <section class="blog-hero" aria-labelledby="blog-hero-title">
+    <div class="container">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:2rem;">
+        <div>
+          <div class="eyebrow no-line" style="margin-bottom:0.75rem;">Sweet Knowledge</div>
+          <h1 id="blog-hero-title" style="font-size:clamp(2rem,4vw,3.5rem);font-weight:800;line-height:1.1;">The Whisk & Bite <em>Journal</em></h1>
+          <p style="color:var(--text-muted);margin-top:0.75rem;max-width:500px;">Dessert recipes, flavor pairing guides, baking tips, and behind-the-scenes stories from our artisan studio.</p>
+        </div>
+        <!-- Search -->
+        <div style="display:flex;gap:0.5rem;">
+          <input type="search" placeholder="Search articles..." aria-label="Search blog articles" style="padding:0.75rem 1.25rem;border-radius:9999px;border:1.5px solid var(--border);background:var(--bg-card);color:var(--text);font-family:var(--font-body);font-size:0.875rem;outline:none;min-width:220px;" />
+          <button class="btn btn-primary btn-sm" aria-label="Search"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg></button>
+        </div>
+      </div>
+
+      <!-- Category Filter -->
+      <div class="filter-tabs" style="justify-content:flex-start;margin-bottom:0;" role="tablist" aria-label="Filter blog by category" data-filter-target="#blog-grid">
+        <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">All Posts</button>
+        <button class="filter-tab" data-filter="recipes" role="tab" aria-selected="false"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cake-slice"></use></svg> Recipes</button>
+        <button class="filter-tab" data-filter="tips" role="tab" aria-selected="false"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-bulb"></use></svg> Tips & Tricks</button>
+        <button class="filter-tab" data-filter="flavors" role="tab" aria-selected="false"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-palette"></use></svg> Flavor Guides</button>
+        <button class="filter-tab" data-filter="events" role="tab" aria-selected="false"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-party-popper"></use></svg> Events</button>
+        <button class="filter-tab" data-filter="behind-scenes" role="tab" aria-selected="false"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-instagram"></use></svg> Behind the Scenes</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════ -->
+  <!-- SECTION 2: FEATURED POST -->
+  <!-- ════════════════════════════ -->
+  <section class="section" aria-labelledby="featured-post-title">
+    <div class="container">
+      <div class="section-header left reveal" style="margin-bottom:2rem;">
+        <div class="eyebrow no-line">Editor's Pick</div>
+        <h2 style="font-size:2rem;font-weight:800;">Featured <em>Article</em></h2>
+      </div>
+
+      <a href="blog-details.html?post=chocolate-pairing" class="featured-post reveal" aria-labelledby="featured-post-title">
+        <div style="overflow:hidden;">
+          <img class="featured-post-img" src="../images/blog-post-flavor.jpg" alt="Featured Whisk and Bite Journal dessert story" loading="lazy"/>
+        </div>
+        <div class="featured-post-body">
+          <div class="post-meta">
+            <span class="post-category"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-palette"></use></svg> Flavor Guide</span>
+            <span>September 28, 2026</span>
+            <span>·</span>
+            <span>8 min read</span>
+          </div>
+          <h2 id="featured-post-title" style="font-size:clamp(1.25rem,2vw,1.6rem);font-weight:800;line-height:1.25;margin-bottom:0.75rem;color:var(--text);">The Ultimate Guide to Pairing Chocolate with Unexpected Flavours</h2>
+          <p style="color:var(--text-muted);line-height:1.8;margin-bottom:1.25rem;">From raspberry and pistachio to blood orange and espresso — discover how our head chef Amelia creates the most unexpected and delicious flavour combinations that keep clients coming back for more.</p>
+          <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+            <div style="display:flex;align-items:center;gap:0.75rem;">
+              <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--raspberry),var(--champagne));display:flex;align-items:center;justify-content:center;font-size:1.2rem;border:2px solid var(--champagne);"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chef"></use></svg></div>
+              <div>
+                <div style="font-weight:700;font-size:0.875rem;">Amelia Chen</div>
+                <div style="font-size:0.75rem;color:var(--text-muted);">Head Chef & Founder</div>
+              </div>
+            </div>
+            <div class="btn btn-primary btn-sm">Read Article →</div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════ -->
+  <!-- SECTION 3: BLOG GRID + SIDEBAR -->
+  <!-- ════════════════════════════ -->
+  <section class="section" style="background:var(--bg-secondary);padding-top:0;" aria-labelledby="blog-grid-title">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 300px;gap:3rem;align-items:start;" class="blog-layout">
+        <!-- Posts Grid -->
+        <div>
+          <div class="section-header left reveal" style="margin-bottom:2.5rem;">
+            <h2 id="blog-grid-title" style="font-size:2rem;font-weight:800;">More <em>Articles</em></h2>
+          </div>
+
+          <div class="grid-2" id="blog-grid" style="gap:2rem;">
+            <!-- Post 7 -->
+            <article class="blog-card reveal reveal-delay-1" data-category="recipes" aria-labelledby="post7-title">
+              <div class="blog-card-img-wrap">
+                <img class="blog-card-img" src="../images/brownie-bites.jpg" alt="Fudgy brownie bites with crackle tops on marble" loading="lazy"/>
+              </div>
+              <div class="blog-card-body">
+                <div class="post-meta"><span class="post-category"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cake-slice"></use></svg> Recipes</span><span>Aug 18, 2026</span></div>
+                <h3 id="post7-title" class="blog-card-title"><a href="blog-details.html?post=brownie-crackle">Fudgy Brownie Bites: Secrets of the Perfect Crackle Top</a></h3>
+                <p style="font-size:0.875rem;color:var(--text-muted);line-height:1.7;flex:1;">The exact whipping time, chocolate ratio and oven trick behind our award-winning crackle tops — plus the sea-salt finish.</p>
+                <a href="blog-details.html?post=brownie-crackle" class="read-more">Read Article <span>→</span></a>
+              </div>
+            </article>
+
+            <!-- Post 8 -->
+            <article class="blog-card reveal reveal-delay-2" data-category="flavors" aria-labelledby="post8-title">
+              <div class="blog-card-img-wrap">
+                <img class="blog-card-img" src="../images/mini-cheesecakes.jpg" alt="Mini cheesecakes with fresh seasonal fruit" loading="lazy"/>
+              </div>
+              <div class="blog-card-body">
+                <div class="post-meta"><span class="post-category"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-palette"></use></svg> Flavor Guide</span><span>Aug 14, 2026</span></div>
+                <h3 id="post8-title" class="blog-card-title"><a href="blog-details.html?post=cheesecake-toppings">Mini Cheesecakes: 7 Seasonal Toppings Worth Trying</a></h3>
+                <p style="font-size:0.875rem;color:var(--text-muted);line-height:1.7;flex:1;">From macerated strawberries to passionfruit curd — how we match each season's fruit to our silky New York-style base.</p>
+                <a href="blog-details.html?post=cheesecake-toppings" class="read-more">Read Article <span>→</span></a>
+              </div>
+            </article>
+
+            <!-- Post 9 -->
+            <article class="blog-card reveal reveal-delay-3" data-category="events" aria-labelledby="post9-title">
+              <div class="blog-card-img-wrap">
+                <img class="blog-card-img" src="https://i.pinimg.com/1200x/69/27/cb/6927cbfd7b8f87cbbf63f25a1b0f7d88.jpg" alt="Party dessert box filled with assorted celebration bites" loading="lazy"/>
+              </div>
+              <div class="blog-card-body">
+                <div class="post-meta"><span class="post-category"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-party-popper"></use></svg> Events</span><span>Aug 08, 2026</span></div>
+                <h3 id="post9-title" class="blog-card-title"><a href="blog-details.html?post=party-box">How to Build a Party Dessert Box Guests Remember</a></h3>
+                <p style="font-size:0.875rem;color:var(--text-muted);line-height:1.7;flex:1;">Portions per guest, flavour variety and packaging tricks — our catering team's checklist for unforgettable party boxes.</p>
+                <a href="blog-details.html?post=party-box" class="read-more">Read Article <span>→</span></a>
+              </div>
+            </article>
+
+            <!-- Post 10 -->
+            <article class="blog-card reveal reveal-delay-4" data-category="tips" aria-labelledby="post10-title">
+              <div class="blog-card-img-wrap">
+                <img class="blog-card-img" src="https://i.pinimg.com/736x/4b/45/66/4b4566b866111e8b949bcf5346b5062a.jpg" alt="Colourful birthday cake pops styled for photos" loading="lazy"/>
+              </div>
+              <div class="blog-card-body">
+                <div class="post-meta"><span class="post-category"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-bulb"></use></svg> Tips</span><span>Aug 02, 2026</span></div>
+                <h3 id="post10-title" class="blog-card-title"><a href="blog-details.html?post=birthday-colours">Birthday Pops: Picking Colours That Pop on Camera</a></h3>
+                <p style="font-size:0.875rem;color:var(--text-muted);line-height:1.7;flex:1;">Lighting, backdrops and edible colours that photograph beautifully — so your celebration looks as good as it tastes.</p>
+                <a href="blog-details.html?post=birthday-colours" class="read-more">Read Article <span>→</span></a>
+              </div>
+            </article>
+
+            <!-- Post 11 -->
+            <article class="blog-card reveal reveal-delay-5" data-category="behind-scenes" aria-labelledby="post11-title">
+              <div class="blog-card-img-wrap">
+                <img class="blog-card-img" src="https://i.pinimg.com/736x/26/0d/96/260d9632570bacaf21b3a73333b75168.jpg" alt="Baker decorating desserts inside the artisan studio" loading="lazy"/>
+              </div>
+              <div class="blog-card-body">
+                <div class="post-meta"><span class="post-category"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-instagram"></use></svg> Behind the Scenes</span><span>Jul 28, 2026</span></div>
+                <h3 id="post11-title" class="blog-card-title"><a href="blog-details.html?post=meet-makers">Meet the Makers: A Morning Inside Our Studio</a></h3>
+                <p style="font-size:0.875rem;color:var(--text-muted);line-height:1.7;flex:1;">Ovens on at 5am, chocolate tempered by six — a behind-the-scenes look at the team crafting your favourite bites.</p>
+                <a href="blog-details.html?post=meet-makers" class="read-more">Read Article <span>→</span></a>
+              </div>
+            </article>
+
+            <!-- Post 12 -->
+            <article class="blog-card reveal reveal-delay-6" data-category="recipes" aria-labelledby="post12-title">
+              <div class="blog-card-img-wrap">
+                <img class="blog-card-img" src="https://i.pinimg.com/736x/66/86/07/668607ea3fddee3d423e25c620f01597.jpg" alt="Salted caramel dessert flavour close-up" loading="lazy"/>
+              </div>
+              <div class="blog-card-body">
+                <div class="post-meta"><span class="post-category"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cake-slice"></use></svg> Recipes</span><span>Jul 22, 2026</span></div>
+                <h3 id="post12-title" class="blog-card-title"><a href="blog-details.html?post=caramel-masterclass">Salted Caramel Masterclass: From Sugar to Silk</a></h3>
+                <p style="font-size:0.875rem;color:var(--text-muted);line-height:1.7;flex:1;">Never split caramel again — temperatures, timing and the fleur de sel finish we use in every caramel bite.</p>
+                <a href="blog-details.html?post=caramel-masterclass" class="read-more">Read Article <span>→</span></a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Pagination -->
+          <div style="display:flex;align-items:center;justify-content:center;gap:0.5rem;margin-top:3rem;" class="reveal" aria-label="Blog pagination">
+            <a href="blog.html" class="btn btn-secondary btn-sm" aria-label="Previous page">← Prev</a>
+            <a href="blog.html" class="filter-tab" aria-label="Page 1">1</a>
+            <span class="btn btn-primary btn-sm" aria-current="page" aria-label="Page 2">2</span>
+            <button class="btn btn-secondary btn-sm" aria-label="Next page" disabled style="opacity:0.45;cursor:not-allowed;">Next →</button>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="blog-sidebar" aria-label="Blog sidebar">
+          <!-- About Widget -->
+          <div class="sidebar-card reveal">
+            <h3>About the Journal</h3>
+            <div style="display:flex;gap:1rem;align-items:center;margin-bottom:1rem;">
+              <div style="width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--raspberry),var(--champagne));display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-lollipop"></use></svg></div>
+              <p style="font-size:0.875rem;color:var(--text-muted);line-height:1.6;">Sweet stories, baking wisdom, and a behind-the-scenes peek at our artisan studio.</p>
+            </div>
+            <a href="about.html" class="btn btn-secondary btn-sm w-full" style="justify-content:center;">About Us →</a>
+          </div>
+
+          <!-- Recent Posts -->
+          <div class="sidebar-card reveal reveal-delay-1">
+            <h3>Recent Posts</h3>
+            <div class="sidebar-post">
+              <img class="sidebar-post-img" src="../images/blog-post-flavor.jpg" alt="Flavor guide article" loading="lazy"/>
+              <div>
+                <a href="blog-details.html?post=chocolate-pairing" style="font-size:0.875rem;font-weight:600;color:var(--text);line-height:1.5;display:block;margin-bottom:0.3rem;transition:color var(--dur-fast);" onmouseover="this.style.color='var(--raspberry)'" onmouseout="this.style.color='var(--text)'">The Ultimate Flavour Pairing Guide</a>
+                <span style="font-size:0.75rem;color:var(--text-muted);">Sep 28, 2026</span>
+              </div>
+            </div>
+            <div class="sidebar-post">
+              <img class="sidebar-post-img" src="https://i.pinimg.com/1200x/93/a2/19/93a21966824cf4eaae5b4691734b724c.jpg" alt="Cake pop recipe" loading="lazy"/>
+              <div>
+                <a href="blog-details.html?post=cake-pops-home" style="font-size:0.875rem;font-weight:600;color:var(--text);line-height:1.5;display:block;margin-bottom:0.3rem;transition:color var(--dur-fast);" onmouseover="this.style.color='var(--raspberry)'" onmouseout="this.style.color='var(--text)'">Bakery-Quality Cake Pops at Home</a>
+                <span style="font-size:0.75rem;color:var(--text-muted);">Sep 20, 2026</span>
+              </div>
+            </div>
+            <div class="sidebar-post">
+              <img class="sidebar-post-img" src="https://i.pinimg.com/736x/9e/58/f4/9e58f46c0957c302964811c267d1f7f5.jpg" alt="Premium baking ingredients" loading="lazy"/>
+              <div>
+                <a href="blog-details.html?post=ingredient-quality" style="font-size:0.875rem;font-weight:600;color:var(--text);line-height:1.5;display:block;margin-bottom:0.3rem;transition:color var(--dur-fast);" onmouseover="this.style.color='var(--raspberry)'" onmouseout="this.style.color='var(--text)'">Why Ingredient Quality Matters</a>
+                <span style="font-size:0.75rem;color:var(--text-muted);">Sep 15, 2026</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tags -->
+          <div class="sidebar-card reveal reveal-delay-2">
+            <h3>Topics</h3>
+            <div class="tag-cloud">
+              <button class="tag" aria-label="Filter by cake pops">Cake Pops</button>
+              <button class="tag" aria-label="Filter by truffles">Truffles</button>
+              <button class="tag" aria-label="Filter by chocolate">Chocolate</button>
+              <button class="tag" aria-label="Filter by weddings">Weddings</button>
+              <button class="tag" aria-label="Filter by gifts">Gifting</button>
+              <button class="tag" aria-label="Filter by flavors">Flavours</button>
+              <button class="tag" aria-label="Filter by packaging">Packaging</button>
+              <button class="tag" aria-label="Filter by tips">Baking Tips</button>
+              <button class="tag" aria-label="Filter by custom">Custom Orders</button>
+            </div>
+          </div>
+
+          <!-- Newsletter Sidebar -->
+          <div class="sidebar-card reveal reveal-delay-3" style="background:linear-gradient(135deg,rgba(184,59,104,0.05),rgba(214,180,106,0.08));border-color:rgba(184,59,104,0.2);">
+            <h3>Stay in the Loop</h3>
+            <p style="font-size:0.875rem;color:var(--text-muted);margin-bottom:1.25rem;line-height:1.6;">Get new recipes, flavor drops and studio news delivered to your inbox.</p>
+            <form id="sidebar-newsletter" aria-label="Newsletter signup" novalidate>
+              <input type="email" placeholder="Your email address" required style="width:100%;padding:0.75rem 1rem;border-radius:var(--radius-lg);border:1.5px solid var(--border);background:var(--bg-card);color:var(--text);font-family:var(--font-body);font-size:0.875rem;outline:none;margin-bottom:0.75rem;" />
+              <button type="submit" class="btn btn-primary btn-sm w-full" style="justify-content:center;">Subscribe <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cake-slice"></use></svg></button>
+            </form>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════ -->
+  <!-- SECTION 4: FEATURED COLLECTION CTA -->
+  <!-- ════════════════════════════ -->
+  <section style="padding:5rem 0;background:var(--cocoa);" aria-labelledby="blog-cta-title">
+    <div class="container" style="text-align:center;">
+      <div class="reveal">
+        <h2 id="blog-cta-title" class="section-title" style="color:white;margin-bottom:1rem;">Love What You're Reading?<br/><em style="color:var(--champagne-lt);">Try Our Bites!</em></h2>
+        <p style="color:rgba(255,255,255,0.65);max-width:500px;margin:0 auto 2.5rem;">All the recipes and flavours we write about are available to order. Let us craft your next sweet moment.</p>
+        <a href="services.html" class="btn btn-champagne btn-xl">Shop Our Menu →</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="../js/icons.js?v=3"></script>
+  <script src="../js/components.js?v=3"></script>
+  <script src="../js/main.js?v=3"></script>
+</body>
+</html>

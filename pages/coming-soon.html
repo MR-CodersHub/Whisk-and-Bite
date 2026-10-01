@@ -1,0 +1,258 @@
+﻿﻿﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Something sweet is coming soon — Whisk &amp; Bite is working on something extraordinary. Sign up to be the first to know. Tiny Treats, Big Moments." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Whisk & Bite" />
+  <meta property="og:title" content="Coming Soon | Whisk &amp; Bite — Tiny Treats, Big Moments" />
+  <meta property="og:description" content="Something sweet is coming soon — Whisk &amp; Bite is working on something extraordinary. Sign up to be the first to know. Tiny Treats, Big Moments." />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Coming Soon | Whisk &amp; Bite — Tiny Treats, Big Moments" />
+  <meta name="twitter:description" content="Something sweet is coming soon — Whisk &amp; Bite is working on something extraordinary. Sign up to be the first to know. Tiny Treats, Big Moments." />
+  <meta name="theme-color" content="#B83B68" />
+  <title>Coming Soon | Whisk &amp; Bite — Tiny Treats, Big Moments</title>
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../css/main.css?v=3" />
+  <style>
+    .coming-page {
+      min-height: calc(100vh - var(--nav-height));
+      background: var(--cocoa);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .coming-visual {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .coming-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.6;
+    }
+
+    .coming-visual::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, transparent 0%, var(--cocoa) 100%);
+    }
+
+    .coming-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2.5rem 4rem 4rem 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .countdown-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin: 2.5rem 0;
+    }
+
+    .countdown-block {
+      text-align: center;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-xl);
+      padding: 1.5rem 0.75rem;
+      backdrop-filter: blur(8px);
+    }
+
+    .countdown-num {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 900;
+      color: var(--champagne-lt);
+      line-height: 1;
+      display: block;
+    }
+
+    .countdown-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-top: 0.5rem;
+    }
+
+    .progress-bar-wrap {
+      background: rgba(255,255,255,0.1);
+      border-radius: 9999px;
+      height: 6px;
+      overflow: hidden;
+      margin: 2rem 0;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      border-radius: 9999px;
+      background: linear-gradient(90deg, var(--raspberry), var(--champagne));
+      animation: progress-load 2s ease-out forwards;
+    }
+
+    @keyframes progress-load {
+      from { width: 0%; }
+      to { width: 72%; }
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .social-coming-btn {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(255,255,255,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: white;
+      transition: all var(--dur-normal);
+      cursor: pointer;
+    }
+
+    .social-coming-btn:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: var(--champagne);
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 768px) {
+      .coming-page { grid-template-columns: 1fr; }
+      .coming-visual { display: none; }
+      .coming-content { padding: 3rem 1.5rem; justify-content: flex-start; }
+      .countdown-num { font-size: 2.5rem; }
+    }
+
+    @media (max-width: 480px) {
+      .countdown-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <div id="brandbar-placeholder" data-on-dark="true"></div>
+
+  <main class="coming-page" aria-labelledby="coming-title">
+    <!-- Visual -->
+    <div class="coming-visual" aria-hidden="true">
+      <img src="../images/ingredients-flatlay.jpg" alt="Premium baking ingredients" loading="eager"/>
+    </div>
+
+    <!-- Content -->
+    <div class="coming-content">
+      <p style="font-size:0.75rem;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--champagne);margin-bottom:1.5rem;">Something Sweet is Coming</p>
+
+      <h1 id="coming-title" style="font-size:clamp(2rem,5vw,3.8rem);font-weight:900;color:white;line-height:1.1;margin-bottom:1rem;">We're Baking<br/>Something<br/><em style="color:var(--champagne-lt);">Extraordinary</em></h1>
+
+      <p style="color:rgba(255,255,255,0.6);font-size:0.95rem;line-height:1.8;max-width:440px;margin-bottom:1rem;">Our new seasonal collection is in the kitchen right now. New flavours, new designs, new packaging — all hand-crafted with our signature obsessive attention to detail.</p>
+
+      <!-- Progress -->
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem;">
+          <span style="font-size:0.8rem;color:rgba(255,255,255,0.5);font-weight:600;">Launch Progress</span>
+          <span style="font-size:0.8rem;color:var(--champagne);font-weight:700;">72%</span>
+        </div>
+        <div class="progress-bar-wrap">
+          <div class="progress-bar-fill"></div>
+        </div>
+      </div>
+
+      <!-- Countdown -->
+      <div class="countdown-grid" id="countdown" aria-live="polite" aria-label="Countdown timer">
+        <div class="countdown-block">
+          <span class="countdown-num" id="cd-days">00</span>
+          <div class="countdown-label">Days</div>
+        </div>
+        <div class="countdown-block">
+          <span class="countdown-num" id="cd-hours">00</span>
+          <div class="countdown-label">Hours</div>
+        </div>
+        <div class="countdown-block">
+          <span class="countdown-num" id="cd-mins">00</span>
+          <div class="countdown-label">Minutes</div>
+        </div>
+        <div class="countdown-block">
+          <span class="countdown-num" id="cd-secs">00</span>
+          <div class="countdown-label">Seconds</div>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <form id="notify-form" aria-label="Notify me when we launch" novalidate style="margin-bottom:2rem;">
+        <label style="display:block;font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:0.75rem;" for="notify-email">Get First Access</label>
+        <div style="display:flex;gap:0.75rem;">
+          <input type="email" id="notify-email" name="email" placeholder="Enter your email address" required style="flex:1;padding:0.875rem 1.25rem;border-radius:var(--radius-pill);border:1.5px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.07);color:white;font-family:var(--font-body);font-size:0.875rem;outline:none;transition:border-color var(--dur-normal);" onfocus="this.style.borderColor='var(--champagne)'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'" />
+          <button type="submit" class="btn btn-champagne btn-sm" style="white-space:nowrap;" aria-label="Notify me">Notify Me →</button>
+        </div>
+        <p style="font-size:0.75rem;color:rgba(255,255,255,0.3);margin-top:0.75rem;">No spam, ever. Just the sweetest news first.</p>
+      </form>
+
+      <!-- Social — generated from SITE so these can never drift or go dead -->
+      <div>
+        <p style="font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:1rem;">Follow the Journey</p>
+        <div class="social-links">
+          <div id="socials-placeholder" data-social-class="social-coming-btn" data-social-wrap="social-flat"></div>
+          <a href="../index.html" class="social-coming-btn" style="background:rgba(184,59,104,0.3);border-color:var(--raspberry);" aria-label="Back to home"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-home"></use></svg></a>
+        </div>
+      </div>
+
+      <!-- Contact — same details as the footer, from the same source -->
+      <div>
+        <p style="font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:1rem;">Get in Touch</p>
+        <div id="contact-placeholder" data-link-style="color:rgba(255,255,255,0.72);"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../js/icons.js?v=3"></script>
+
+  <script src="../js/components.js?v=3"></script>
+  <script src="../js/main.js?v=3"></script>
+  <script>
+    // Countdown timer — target 30 days from now
+    const target = new Date();
+    target.setDate(target.getDate() + 30);
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = target - now;
+
+      if (diff <= 0) {
+        window.location.href = 'index.html';
+        return;
+      }
+
+      const days  = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const mins  = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const secs  = Math.floor((diff % (1000 * 60)) / 1000);
+
+      const pad = n => String(n).padStart(2, '0');
+
+      document.getElementById('cd-days').textContent  = pad(days);
+      document.getElementById('cd-hours').textContent = pad(hours);
+      document.getElementById('cd-mins').textContent  = pad(mins);
+      document.getElementById('cd-secs').textContent  = pad(secs);
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>

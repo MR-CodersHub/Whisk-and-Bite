@@ -1,0 +1,378 @@
+﻿﻿﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" data-nav="solid" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cake Pops Studio — Full service details for our signature handcrafted cake pop collections at Whisk &amp; Bite. Tiny Treats, Big Moments." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Whisk & Bite" />
+  <meta property="og:title" content="Cake Pop Studio | Whisk &amp; Bite — Tiny Treats, Big Moments" />
+  <meta property="og:description" content="Cake Pops Studio — Full service details for our signature handcrafted cake pop collections at Whisk &amp; Bite. Tiny Treats, Big Moments." />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cake Pop Studio | Whisk &amp; Bite — Tiny Treats, Big Moments" />
+  <meta name="twitter:description" content="Cake Pops Studio — Full service details for our signature handcrafted cake pop collections at Whisk &amp; Bite. Tiny Treats, Big Moments." />
+  <meta name="theme-color" content="#B83B68" />
+  <title>Cake Pop Studio | Whisk &amp; Bite — Tiny Treats, Big Moments</title>
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../css/main.css?v=3" />
+  <style>
+    .detail-hero {
+      height: 75vh;
+      min-height: 520px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .gallery-masonry {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 220px 220px;
+      gap: 1rem;
+    }
+
+    .gallery-masonry .gallery-item:first-child {
+      grid-row: span 2;
+    }
+
+    .step-card {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+      padding: 1.5rem;
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-card);
+      transition: all var(--dur-normal);
+    }
+
+    .step-card:hover { transform: translateX(6px); border-color: var(--raspberry); }
+
+    .step-number {
+      width: 48px; height: 48px; flex-shrink: 0;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--raspberry), var(--raspberry-dk));
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-display);
+      font-size: 1.2rem; font-weight: 900;
+      color: white;
+      box-shadow: 0 4px 16px rgba(184,59,104,0.35);
+    }
+
+    .occasion-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1.25rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      border: 2px solid var(--border);
+      color: var(--text);
+      background: var(--bg-card);
+      transition: all var(--dur-fast);
+    }
+    .occasion-chip:hover { border-color: var(--raspberry); color: var(--raspberry); }
+
+    @media (max-width: 768px) {
+      .gallery-masonry { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+      .gallery-masonry .gallery-item:first-child { grid-row: span 1; }
+    }
+  </style>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <!-- ════════════════════════════ -->
+  <!-- SECTION 1: DETAIL HERO -->
+  <!-- ════════════════════════════ -->
+  <section class="detail-hero" aria-labelledby="detail-hero-title">
+    <img src="https://i.pinimg.com/736x/c2/48/8b/c2488bb8d5d9e229107b24fe6104683f.jpg" alt="The artisan cake pop studio — handcrafted cake pops for your perfect moment" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;" loading="eager"/>
+    <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(43,29,32,0.92) 0%,rgba(43,29,32,0.4) 60%,transparent 100%);"></div>
+    <div class="container" style="position:relative;z-index:1;padding-bottom:4rem;">
+      <nav aria-label="breadcrumb" style="margin-bottom:1.5rem;">
+        <ol style="display:flex;gap:0.5rem;font-size:0.8rem;color:rgba(255,255,255,0.6);list-style:none;flex-wrap:wrap;">
+          <li><a href="../index.html" style="color:var(--champagne-lt);">Home</a></li>
+          <li>/</li>
+          <li><a href="services.html" style="color:var(--champagne-lt);">Services</a></li>
+          <li>/</li>
+          <li aria-current="page" style="color:rgba(255,255,255,0.5);">Cake Pop Studio</li>
+        </ol>
+      </nav>
+      <div class="badge badge-raspberry" style="margin-bottom:1rem;font-size:0.75rem;">✦ Signature Service</div>
+      <h1 id="detail-hero-title" style="font-size:clamp(2.2rem,5vw,4rem);font-weight:800;color:white;line-height:1.1;margin-bottom:1rem;max-width:700px;">The Artisan<br/><em style="color:var(--champagne-lt);">Cake Pop Studio</em></h1>
+      <p style="color:rgba(255,255,255,0.8);max-width:500px;font-size:1.05rem;line-height:1.7;margin-bottom:2rem;">Every pop is a tiny masterpiece — handcrafted, hand-painted, and custom-designed for your perfect moment.</p>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn-primary btn-lg">Start Your Order <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cake-slice"></use></svg></a>
+        <a href="pricing.html" class="btn btn-ghost btn-lg">View Pricing</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════ -->
+  <!-- SECTION 2: SERVICE OVERVIEW -->
+  <!-- ════════════════════════════ -->
+  <section class="section" aria-labelledby="service-overview-title">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;">
+        <!-- Left: Details -->
+        <div class="reveal-left">
+          <div class="eyebrow no-line">What We Offer</div>
+          <h2 id="service-overview-title" class="section-title" style="text-align:left;max-width:none;">Cake Pops —<br/><em>Reimagined</em></h2>
+          <p style="color:var(--text-muted);line-height:1.9;margin-bottom:1.5rem;">Forget everything you think you know about cake pops. At Whisk & Bite, each one begins with premium cake — moist, flavourful, and perfectly proportioned — blended with our velvety cream cheese frosting, shaped into perfect spheres, and dipped in couverture Belgian chocolate.</p>
+          <p style="color:var(--text-muted);line-height:1.9;margin-bottom:2rem;">The decoration is where the magic happens. Our artists paint each pop by hand using food-safe edible colours, apply real 24-karat gold leaf, and add delicate handcrafted sugar flowers, crystallised fruit, or sprinkle finishes — each one unique.</p>
+
+          <!-- Quick specs -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:2.5rem;">
+            <div style="padding:1.25rem;background:var(--bg-secondary);border-radius:var(--radius-lg);border:1px solid var(--border);">
+              <div style="font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--raspberry);margin-bottom:0.5rem;">Min. Order</div>
+              <div style="font-family:var(--font-display);font-size:1.4rem;font-weight:800;">12 pops</div>
+            </div>
+            <div style="padding:1.25rem;background:var(--bg-secondary);border-radius:var(--radius-lg);border:1px solid var(--border);">
+              <div style="font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--raspberry);margin-bottom:0.5rem;">Lead Time</div>
+              <div style="font-family:var(--font-display);font-size:1.4rem;font-weight:800;">3–5 days</div>
+            </div>
+            <div style="padding:1.25rem;background:var(--bg-secondary);border-radius:var(--radius-lg);border:1px solid var(--border);">
+              <div style="font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--raspberry);margin-bottom:0.5rem;">Starting Price</div>
+              <div style="font-family:var(--font-display);font-size:1.4rem;font-weight:800;">$3.50/pop</div>
+            </div>
+            <div style="padding:1.25rem;background:var(--bg-secondary);border-radius:var(--radius-lg);border:1px solid var(--border);">
+              <div style="font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--raspberry);margin-bottom:0.5rem;">Shelf Life</div>
+              <div style="font-family:var(--font-display);font-size:1.4rem;font-weight:800;">7 days</div>
+            </div>
+          </div>
+
+          <a href="contact.html" class="btn btn-primary btn-lg">Place Your Order →</a>
+        </div>
+
+        <!-- Right: Gallery Masonry -->
+        <div class="reveal-right">
+          <div class="gallery-masonry">
+            <div class="gallery-item" data-lightbox="https://i.pinimg.com/736x/28/5d/c8/285dc86bc4b5a185381275e6f755764a.jpg" style="height:auto;" aria-label="View cake pops gallery">
+              <img src="https://i.pinimg.com/736x/28/5d/c8/285dc86bc4b5a185381275e6f755764a.jpg" alt="Luxury artisan cake pops with gold leaf and fruit toppings" style="width:100%;height:100%;object-fit:cover;" loading="lazy"/>
+              <div class="gallery-overlay"><span style="color:white;font-size:0.75rem;font-weight:700;letter-spacing:0.1em;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg> View</span></div>
+            </div>
+            <div class="gallery-item" data-lightbox="https://i.pinimg.com/236x/57/09/0c/57090c5afa47326bb46454e3a2bc4045.jpg" aria-label="View custom design gallery">
+              <img src="https://i.pinimg.com/236x/57/09/0c/57090c5afa47326bb46454e3a2bc4045.jpg" alt="Hand-painted custom wedding cake pops" style="width:100%;height:100%;object-fit:cover;" loading="lazy"/>
+              <div class="gallery-overlay"><span style="color:white;font-size:0.75rem;font-weight:700;letter-spacing:0.1em;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg> View</span></div>
+            </div>
+            <div class="gallery-item" data-lightbox="https://i.pinimg.com/736x/49/15/c9/4915c9a874567163e170f1a592dbe8ec.jpg" aria-label="View birthday pops gallery">
+              <img src="https://i.pinimg.com/736x/49/15/c9/4915c9a874567163e170f1a592dbe8ec.jpg" alt="Colourful birthday cake pop bouquet" style="width:100%;height:100%;object-fit:cover;" loading="lazy"/>
+              <div class="gallery-overlay"><span style="color:white;font-size:0.75rem;font-weight:700;letter-spacing:0.1em;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg> View</span></div>
+            </div>
+            <div class="gallery-item" data-lightbox="https://i.pinimg.com/736x/1f/f1/3f/1ff13fefe9b581c36a5f6959944fc7db.jpg" aria-label="View packaging gallery">
+              <img src="https://i.pinimg.com/736x/1f/f1/3f/1ff13fefe9b581c36a5f6959944fc7db.jpg" alt="Premium cake pop packaging with wax seal" style="width:100%;height:100%;object-fit:cover;" loading="lazy"/>
+              <div class="gallery-overlay"><span style="color:white;font-size:0.75rem;font-weight:700;letter-spacing:0.1em;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg> View</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════ -->
+  <!-- SECTION 3: PRODUCTION PROCESS -->
+  <!-- ════════════════════════════ -->
+  <section class="section" style="background:var(--bg-secondary);" aria-labelledby="process-title">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="eyebrow center">Behind the Scene</div>
+        <h2 class="section-title" id="process-title">How Your Cake Pops<br/>Are <em>Made</em></h2>
+        <p class="section-subtitle">Every step is crafted with obsessive care. Here's what happens between your order and delivery.</p>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:1rem;max-width:700px;margin:0 auto;">
+        <div class="step-card reveal">
+          <div class="step-number">1</div>
+          <div>
+            <h4 style="font-weight:700;margin-bottom:0.4rem;">Design Brief & Approval</h4>
+            <p style="font-size:0.9rem;color:var(--text-muted);">We discuss your vision, event details and design preferences. A digital mockup is created for your approval before any baking begins.</p>
+          </div>
+        </div>
+        <div class="step-card reveal reveal-delay-1">
+          <div class="step-number">2</div>
+          <div>
+            <h4 style="font-weight:700;margin-bottom:0.4rem;">Baking & Blending</h4>
+            <p style="font-size:0.9rem;color:var(--text-muted);">Fresh cake is baked in your chosen flavour, cooled, then carefully blended with our house-made cream cheese frosting to the perfect consistency.</p>
+          </div>
+        </div>
+        <div class="step-card reveal reveal-delay-2">
+          <div class="step-number">3</div>
+          <div>
+            <h4 style="font-weight:700;margin-bottom:0.4rem;">Shaping & Chilling</h4>
+            <p style="font-size:0.9rem;color:var(--text-muted);">Each pop is hand-rolled into a perfect sphere, placed on premium food-safe sticks, and chilled overnight for the ideal firmness.</p>
+          </div>
+        </div>
+        <div class="step-card reveal reveal-delay-3">
+          <div class="step-number">4</div>
+          <div>
+            <h4 style="font-weight:700;margin-bottom:0.4rem;">Dipping & Coating</h4>
+            <p style="font-size:0.9rem;color:var(--text-muted);">Each pop is dipped in tempered Belgian chocolate or coloured candy coating, allowed to set, and receives a second dip for a flawless, crack-free shell.</p>
+          </div>
+        </div>
+        <div class="step-card reveal reveal-delay-4">
+          <div class="step-number">5</div>
+          <div>
+            <h4 style="font-weight:700;margin-bottom:0.4rem;">Hand-Painting & Decoration</h4>
+            <p style="font-size:0.9rem;color:var(--text-muted);">Our edible painting artists hand-paint each pop with food-safe colours, apply gold leaf, attach handcrafted sugar flowers, and add final sprinkle or glitter details.</p>
+          </div>
+        </div>
+        <div class="step-card reveal reveal-delay-5">
+          <div class="step-number">6</div>
+          <div>
+            <h4 style="font-weight:700;margin-bottom:0.4rem;">Quality Check & Packaging</h4>
+            <p style="font-size:0.9rem;color:var(--text-muted);">Every pop is inspected by our quality team, individually wrapped, and placed in our signature pink & gold gift boxes with ribbon, wax seal, and personalised card.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════ -->
+  <!-- SECTION 4: OCCASIONS & TESTIMONIAL -->
+  <!-- ════════════════════════════ -->
+  <section class="section" aria-labelledby="occasions-detail-title">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;">
+        <div class="reveal-left">
+          <div class="eyebrow no-line">Perfect For</div>
+          <h2 id="occasions-detail-title" class="section-title" style="text-align:left;max-width:none;">Every <em>Occasion</em></h2>
+          <p style="color:var(--text-muted);line-height:1.8;margin-bottom:2rem;">Cake pops are the most versatile dessert we offer — elegant enough for black-tie weddings, fun enough for kids' parties, and personal enough for heartfelt gifts.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-bottom:2.5rem;">
+            <span class="occasion-chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-wedding"></use></svg> Weddings</span>
+            <span class="occasion-chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-birthday-cake"></use></svg> Birthdays</span>
+            <span class="occasion-chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-baby"></use></svg> Baby Showers</span>
+            <span class="occasion-chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-building"></use></svg> Corporate Events</span>
+            <span class="occasion-chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-ring"></use></svg> Engagements</span>
+            <span class="occasion-chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-graduation"></use></svg> Graduations</span>
+            <span class="occasion-chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-gift"></use></svg> Gift Boxes</span>
+            <span class="occasion-chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-tree"></use></svg> Holidays</span>
+            <span class="occasion-chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-heart-ribbon"></use></svg> Valentine's Day</span>
+          </div>
+          <div style="padding:2rem;background:linear-gradient(135deg,rgba(184,59,104,0.06),rgba(214,180,106,0.08));border-radius:var(--radius-xl);border:1px solid rgba(184,59,104,0.2);">
+            <p style="font-style:italic;font-family:var(--font-display);font-size:1.15rem;color:var(--text);line-height:1.6;margin-bottom:1rem;">"The wedding cake pops were the most photographed thing at our reception. Every single guest asked for the name of our baker!"</p>
+            <div style="display:flex;align-items:center;gap:0.75rem;">
+              <div style="font-size:1.5rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-wedding"></use></svg></div>
+              <div>
+                <div style="font-weight:700;font-size:0.9rem;">Isabella & James T.</div>
+                <div style="font-size:0.8rem;color:var(--text-muted);">Wedding, June 2026</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal-right">
+          <img src="https://i.pinimg.com/1200x/df/cf/b9/dfcfb9a4fb1570b61543a40db130b4a1.jpg" alt="Cake pops styled for weddings, birthdays and celebrations" style="width:100%;height:480px;object-fit:cover;border-radius:24px;box-shadow:var(--shadow-xl);" loading="lazy"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════ -->
+  <!-- SECTION 5: FLAVORS GRID -->
+  <!-- ════════════════════════════ -->
+  <section class="section" style="background:var(--cocoa);" aria-labelledby="flavors-detail-title">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="eyebrow center" style="color:var(--champagne);">The Menu</div>
+        <h2 class="section-title" id="flavors-detail-title" style="color:white;">18 <em style="color:var(--champagne-lt);">Signature</em><br/>Flavours</h2>
+      </div>
+
+      <div class="grid-4">
+        <div style="text-align:center;padding:1.5rem;background:rgba(255,255,255,0.05);border-radius:var(--radius-lg);border:1px solid rgba(255,255,255,0.1);" class="reveal reveal-delay-1">
+          <div style="font-size:2rem;margin-bottom:0.75rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chocolate"></use></svg></div>
+          <div style="color:white;font-weight:700;margin-bottom:0.3rem;">Dark Chocolate</div>
+          <div style="font-size:0.8rem;color:rgba(255,255,255,0.5);">72% Belgian couverture</div>
+        </div>
+        <div style="text-align:center;padding:1.5rem;background:rgba(255,255,255,0.05);border-radius:var(--radius-lg);border:1px solid rgba(255,255,255,0.1);" class="reveal reveal-delay-2">
+          <div style="font-size:2rem;margin-bottom:0.75rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-strawberry"></use></svg></div>
+          <div style="color:white;font-weight:700;margin-bottom:0.3rem;">Raspberry Truffle</div>
+          <div style="font-size:0.8rem;color:rgba(255,255,255,0.5);">Fresh raspberry compote</div>
+        </div>
+        <div style="text-align:center;padding:1.5rem;background:rgba(255,255,255,0.05);border-radius:var(--radius-lg);border:1px solid rgba(255,255,255,0.1);" class="reveal reveal-delay-3">
+          <div style="font-size:2rem;margin-bottom:0.75rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-lemon"></use></svg></div>
+          <div style="color:white;font-weight:700;margin-bottom:0.3rem;">Lemon Curd</div>
+          <div style="font-size:0.8rem;color:rgba(255,255,255,0.5);">Sicilian lemon zest</div>
+        </div>
+        <div style="text-align:center;padding:1.5rem;background:rgba(255,255,255,0.05);border-radius:var(--radius-lg);border:1px solid rgba(255,255,255,0.1);" class="reveal reveal-delay-4">
+          <div style="font-size:2rem;margin-bottom:0.75rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-leaf"></use></svg></div>
+          <div style="color:white;font-weight:700;margin-bottom:0.3rem;">Pistachio</div>
+          <div style="font-size:0.8rem;color:rgba(255,255,255,0.5);">Iranian pistachio paste</div>
+        </div>
+        <div style="text-align:center;padding:1.5rem;background:rgba(255,255,255,0.05);border-radius:var(--radius-lg);border:1px solid rgba(255,255,255,0.1);" class="reveal reveal-delay-1">
+          <div style="font-size:2rem;margin-bottom:0.75rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-ice-cream"></use></svg></div>
+          <div style="color:white;font-weight:700;margin-bottom:0.3rem;">Vanilla Bean</div>
+          <div style="font-size:0.8rem;color:rgba(255,255,255,0.5);">Madagascan vanilla</div>
+        </div>
+        <div style="text-align:center;padding:1.5rem;background:rgba(255,255,255,0.05);border-radius:var(--radius-lg);border:1px solid rgba(255,255,255,0.1);" class="reveal reveal-delay-2">
+          <div style="font-size:2rem;margin-bottom:0.75rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-nut"></use></svg></div>
+          <div style="color:white;font-weight:700;margin-bottom:0.3rem;">Salted Caramel</div>
+          <div style="font-size:0.8rem;color:rgba(255,255,255,0.5);">Fleur de sel finish</div>
+        </div>
+        <div style="text-align:center;padding:1.5rem;background:rgba(255,255,255,0.05);border-radius:var(--radius-lg);border:1px solid rgba(255,255,255,0.1);" class="reveal reveal-delay-3">
+          <div style="font-size:2rem;margin-bottom:0.75rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-coffee"></use></svg></div>
+          <div style="color:white;font-weight:700;margin-bottom:0.3rem;">Espresso</div>
+          <div style="font-size:0.8rem;color:rgba(255,255,255,0.5);">Single-origin cold brew</div>
+        </div>
+        <div style="text-align:center;padding:1.5rem;background:rgba(255,255,255,0.05);border-radius:var(--radius-lg);border:1px solid rgba(255,255,255,0.1);" class="reveal reveal-delay-4">
+          <div style="font-size:2rem;margin-bottom:0.75rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-rose"></use></svg></div>
+          <div style="color:white;font-weight:700;margin-bottom:0.3rem;">Rose & Lychee</div>
+          <div style="font-size:0.8rem;color:rgba(255,255,255,0.5);">Turkish rose water</div>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:3rem;" class="reveal">
+        <a href="contact.html" class="btn btn-champagne btn-lg">Request a Custom Flavour →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════ -->
+  <!-- SECTION 6: ORDER CTA -->
+  <!-- ════════════════════════════ -->
+  <section class="section" style="background:var(--bg-secondary);" aria-labelledby="detail-cta-title">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
+        <div class="reveal-left">
+          <img src="https://i.pinimg.com/736x/05/fa/ea/05faea46aaa20aed10e2fc45787ac079.jpg" alt="Handcrafted cake pops ready for your perfect order" style="width:100%;height:480px;object-fit:cover;border-radius:24px;border:3px solid var(--champagne);box-shadow:var(--shadow-xl);" loading="lazy"/>
+        </div>
+        <div class="reveal-right">
+          <div class="eyebrow no-line">Ready to Order?</div>
+          <h2 id="detail-cta-title" class="section-title" style="text-align:left;max-width:none;">Let's Create Your<br/><em>Perfect Pops</em></h2>
+          <p style="color:var(--text-muted);line-height:1.8;margin-bottom:1.5rem;">Fill out our simple order form with your occasion, flavour preferences, quantity, and any design ideas. We'll come back with a detailed proposal within 24 hours.</p>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;margin-bottom:2.5rem;">
+            <li style="display:flex;gap:0.75rem;align-items:center;font-size:0.9rem;color:var(--text-muted);">
+              <span style="width:22px;height:22px;border-radius:50%;background:rgba(168,185,138,0.25);color:var(--pistachio-dk);display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:800;flex-shrink:0;">✓</span>
+              Free design mockup with every custom order
+            </li>
+            <li style="display:flex;gap:0.75rem;align-items:center;font-size:0.9rem;color:var(--text-muted);">
+              <span style="width:22px;height:22px;border-radius:50%;background:rgba(168,185,138,0.25);color:var(--pistachio-dk);display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:800;flex-shrink:0;">✓</span>
+              Unlimited design revisions
+            </li>
+            <li style="display:flex;gap:0.75rem;align-items:center;font-size:0.9rem;color:var(--text-muted);">
+              <span style="width:22px;height:22px;border-radius:50%;background:rgba(168,185,138,0.25);color:var(--pistachio-dk);display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:800;flex-shrink:0;">✓</span>
+              Gluten-free and vegan options available
+            </li>
+            <li style="display:flex;gap:0.75rem;align-items:center;font-size:0.9rem;color:var(--text-muted);">
+              <span style="width:22px;height:22px;border-radius:50%;background:rgba(168,185,138,0.25);color:var(--pistachio-dk);display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:800;flex-shrink:0;">✓</span>
+              National delivery in temperature-controlled packaging
+            </li>
+          </ul>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+            <a href="contact.html" class="btn btn-primary btn-lg">Start My Order <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cake-slice"></use></svg></a>
+            <a href="pricing.html" class="btn btn-secondary btn-lg">View Pricing</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="../js/icons.js?v=3"></script>
+  <script src="../js/components.js?v=3"></script>
+  <script src="../js/main.js?v=3"></script>
+</body>
+</html>

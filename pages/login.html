@@ -1,0 +1,444 @@
+﻿﻿﻿﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" data-nav="solid" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Login or Register at Whisk &amp; Bite — Access your order history, saved flavours, and exclusive member offers. Tiny Treats, Big Moments." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Whisk & Bite" />
+  <meta property="og:title" content="Login / Register | Whisk &amp; Bite — Tiny Treats, Big Moments" />
+  <meta property="og:description" content="Login or Register at Whisk &amp; Bite — Access your order history, saved flavours, and exclusive member offers. Tiny Treats, Big Moments." />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Login / Register | Whisk &amp; Bite — Tiny Treats, Big Moments" />
+  <meta name="twitter:description" content="Login or Register at Whisk &amp; Bite — Access your order history, saved flavours, and exclusive member offers. Tiny Treats, Big Moments." />
+  <meta name="theme-color" content="#B83B68" />
+  <title>Login / Register | Whisk &amp; Bite — Tiny Treats, Big Moments</title>
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../css/main.css?v=3" />
+  <style>
+    /* Login brand bar: logo mark hidden, tagline kept at the left,
+       toggles grouped as a right-side pill, overlaid so the side
+       image starts from the very top */
+    .brandbar .logo-icon,
+    .brandbar .logo-wordmark { display: none; }
+    .brandbar .logo-tagline {
+      font-size: 0.8rem;
+      letter-spacing: 0.22em;
+    }
+    .brandbar {
+      justify-content: flex-end;
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      z-index: 50;
+      background: transparent;
+    }
+    .brandbar-actions {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 9999px;
+      padding: 0.3rem 0.4rem;
+      box-shadow: var(--shadow-card);
+    }
+
+    .auth-page {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .auth-panel {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 4rem 3rem;
+    }
+
+    .auth-visual {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .auth-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.35s ease;
+    }
+
+    .auth-visual-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(43,29,32,0.85) 0%, rgba(184,59,104,0.4) 100%);
+    }
+
+    .auth-visual-content {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 3rem;
+    }
+
+    .auth-form-wrapper {
+      width: 100%;
+      max-width: 420px;
+    }
+
+    .tab-switcher {
+      display: flex;
+      background: var(--bg-secondary);
+      border-radius: var(--radius-pill);
+      padding: 4px;
+      margin-bottom: 2.5rem;
+      border: 1px solid var(--border);
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius-pill);
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      transition: all var(--dur-normal) var(--ease-smooth);
+      cursor: pointer;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .tab-btn.active {
+      background: linear-gradient(135deg, var(--raspberry), var(--raspberry-dk));
+      color: white;
+      box-shadow: 0 4px 16px rgba(184,59,104,0.4);
+    }
+
+    .social-auth-btn {
+      width: 100%;
+      padding: 0.875rem 1.5rem;
+      border-radius: var(--radius-lg);
+      border: 1.5px solid var(--border);
+      background: var(--bg-card);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+      transition: all var(--dur-normal);
+    }
+
+    .social-auth-btn:hover {
+      border-color: var(--raspberry);
+      background: rgba(184,59,104,0.05);
+      transform: translateY(-2px);
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 1.75rem 0;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    .divider::before, .divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .strength-bar {
+      height: 4px;
+      border-radius: 9999px;
+      background: var(--border);
+      margin-top: 0.5rem;
+      overflow: hidden;
+    }
+
+    .strength-fill {
+      height: 100%;
+      border-radius: 9999px;
+      width: 0%;
+      transition: all 0.4s var(--ease-smooth);
+    }
+
+    .perk-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: rgba(255,255,255,0.85);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .perk-icon {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.2);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      font-size: 0.8rem;
+    }
+
+    @media (min-width: 769px) {
+      /* Keep the side image balanced — capped card instead of full-height stretch */
+      .auth-page { align-items: center; }
+      .auth-visual {
+        height: min(660px, calc(100vh - 4rem));
+        border-radius: var(--radius-2xl);
+        margin: 2rem 0 2rem 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .auth-page { grid-template-columns: 1fr; }
+      .auth-visual { display: none; }
+      .auth-panel { padding: calc(var(--nav-height) + 2rem) 1.5rem 3rem; }
+    }
+  </style>
+</head>
+<body>
+  <div id="brandbar-placeholder"></div>
+
+  <main class="auth-page" aria-label="Authentication page">
+    <!-- Visual Panel -->
+    <div class="auth-visual" aria-hidden="true">
+      <img id="auth-visual-img" src="https://i.pinimg.com/736x/f4/db/42/f4db42752bd8fa5ad75d557fc8e74e1e.jpg" alt="Artisan dessert display for members signing in" loading="eager"/>
+      <div class="auth-visual-overlay"></div>
+        <div class="auth-visual-content">
+          <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.5rem);font-weight:800;color:white;line-height:1.2;margin-bottom:1rem;">Your Sweet<br/><em style="color:var(--champagne-lt);">Membership</em></h2>
+        <p style="color:rgba(255,255,255,0.7);max-width:340px;line-height:1.7;margin-bottom:2.5rem;font-size:0.95rem;">Join our community of dessert lovers. Manage orders, save favourite flavours, and get exclusive member offers.</p>
+
+        <div style="text-align:left;width:100%;max-width:340px;">
+          <div class="perk-item">
+            <div class="perk-icon">✓</div>
+            <span>Early access to new seasonal flavours</span>
+          </div>
+          <div class="perk-item">
+            <div class="perk-icon">✓</div>
+            <span>Save favourite flavour combinations</span>
+          </div>
+          <div class="perk-item">
+            <div class="perk-icon">✓</div>
+            <span>Order history & reorder in 2 clicks</span>
+          </div>
+          <div class="perk-item">
+            <div class="perk-icon">✓</div>
+            <span>Exclusive member discounts & offers</span>
+          </div>
+          <div class="perk-item">
+            <div class="perk-icon">✓</div>
+            <span>Priority customer support</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Auth Form Panel -->
+    <div class="auth-panel" style="background:var(--bg);">
+      <div class="auth-form-wrapper">
+        <!-- Logo -->
+        <div style="text-align:center;margin-bottom:2.5rem;">
+          <a href="../index.html" class="logo" style="justify-content:center;margin-bottom:0.5rem;display:inline-flex;" aria-label="Back to Whisk & Bite home">
+            <div class="logo-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-lollipop"></use></svg></div>
+            <span>Whisk & Bite</span>
+          </a>
+        </div>
+
+        <!-- Tab Switcher -->
+        <div class="tab-switcher" role="tablist" aria-label="Login or Register">
+          <button class="tab-btn active" id="login-tab" role="tab" aria-selected="true" aria-controls="login-panel" onclick="switchTab('login')">Sign In</button>
+          <button class="tab-btn" id="register-tab" role="tab" aria-selected="false" aria-controls="register-panel" onclick="switchTab('register')">Create Account</button>
+        </div>
+
+        <!-- Social Auth -->
+        <div style="display:flex;flex-direction:column;gap:0.75rem;margin-bottom:0.25rem;">
+          <button class="social-auth-btn" onclick="Toast.show('Google auth coming soon!', 'default')" aria-label="Continue with Google">
+            <span style="font-size:1.2rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-brand-google"></use></svg></span> Continue with Google
+          </button>
+          <button class="social-auth-btn" onclick="Toast.show('Apple auth coming soon!', 'default')" aria-label="Continue with Apple">
+            <span style="font-size:1.1rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-brand-apple"></use></svg></span> Continue with Apple
+          </button>
+        </div>
+
+        <div class="divider">or continue with email</div>
+
+        <!-- LOGIN FORM -->
+        <div id="login-panel" role="tabpanel" aria-labelledby="login-tab">
+          <form id="login-form" data-validate aria-label="Sign in form" novalidate>
+            <div class="form-group">
+              <label class="form-label" for="login-email">Email Address *</label>
+              <input type="email" id="login-email" name="email" class="form-control" placeholder="you@email.com" required autocomplete="email" />
+              <span class="form-error-msg">Please enter a valid email</span>
+            </div>
+
+            <div class="form-group">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem;">
+                <label class="form-label" for="login-password" style="margin-bottom:0;">Password *</label>
+                <a href="#" style="font-size:0.8rem;color:var(--raspberry);font-weight:600;" onclick="Toast.show('Password reset email sent!', 'success');return false;">Forgot password?</a>
+              </div>
+              <div style="position:relative;">
+                <input type="password" id="login-password" name="password" class="form-control" placeholder="••••••••" required autocomplete="current-password" />
+                <button type="button" onclick="togglePassword('login-password', this)" style="position:absolute;right:1rem;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:1rem;" aria-label="Toggle password visibility"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-eye"></use></svg></button>
+              </div>
+              <span class="form-error-msg">Password is required</span>
+            </div>
+
+            <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1.75rem;">
+              <input type="checkbox" id="remember-me" name="remember" style="width:18px;height:18px;accent-color:var(--raspberry);cursor:pointer;" />
+              <label for="remember-me" style="font-size:0.875rem;color:var(--text-muted);cursor:pointer;">Remember me for 30 days</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg w-full" style="justify-content:center;">Sign In to My Account →</button>
+          </form>
+
+          <p style="text-align:center;margin-top:1.5rem;font-size:0.875rem;color:var(--text-muted);">Don't have an account? <a href="#" onclick="switchTab('register');return false;" style="color:var(--raspberry);font-weight:700;">Create one free</a></p>
+        </div>
+
+        <!-- REGISTER FORM -->
+        <div id="register-panel" role="tabpanel" aria-labelledby="register-tab" style="display:none;">
+          <form id="register-form" data-validate aria-label="Create account form" novalidate>
+            <div class="grid-2" style="gap:1rem;">
+              <div class="form-group">
+                <label class="form-label" for="reg-fname">First Name *</label>
+                <input type="text" id="reg-fname" name="first_name" class="form-control" placeholder="Amelia" required autocomplete="given-name" />
+                <span class="form-error-msg">First name required</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="reg-lname">Last Name *</label>
+                <input type="text" id="reg-lname" name="last_name" class="form-control" placeholder="Chen" required autocomplete="family-name" />
+                <span class="form-error-msg">Last name required</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="reg-email">Email Address *</label>
+              <input type="email" id="reg-email" name="email" class="form-control" placeholder="you@email.com" required autocomplete="email" />
+              <span class="form-error-msg">Please enter a valid email</span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="reg-password">Password *</label>
+              <div style="position:relative;">
+                <input type="password" id="reg-password" name="password" class="form-control" placeholder="Min 8 characters" required autocomplete="new-password" oninput="checkStrength(this)" />
+                <button type="button" onclick="togglePassword('reg-password', this)" style="position:absolute;right:1rem;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:1rem;" aria-label="Toggle password visibility"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-eye"></use></svg></button>
+              </div>
+              <div class="strength-bar" aria-label="Password strength indicator">
+                <div class="strength-fill" id="strength-fill"></div>
+              </div>
+              <div id="strength-label" style="font-size:0.75rem;color:var(--text-muted);margin-top:0.3rem;"></div>
+              <span class="form-error-msg">Password must be at least 8 characters</span>
+            </div>
+
+            <div style="display:flex;align-items:flex-start;gap:0.75rem;margin-bottom:1.75rem;">
+              <input type="checkbox" id="agree-terms" name="terms" style="width:18px;height:18px;accent-color:var(--raspberry);cursor:pointer;margin-top:2px;flex-shrink:0;" required />
+              <label for="agree-terms" style="font-size:0.85rem;color:var(--text-muted);cursor:pointer;line-height:1.5;">I agree to the <a href="#" style="color:var(--raspberry);font-weight:700;">Terms of Service</a> and <a href="#" style="color:var(--raspberry);font-weight:700;">Privacy Policy</a>. I'd like to receive sweet updates & offers by email.</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg w-full" style="justify-content:center;">Create My Account <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cake-slice"></use></svg></button>
+          </form>
+
+          <p style="text-align:center;margin-top:1.5rem;font-size:0.875rem;color:var(--text-muted);">Already have an account? <a href="#" onclick="switchTab('login');return false;" style="color:var(--raspberry);font-weight:700;">Sign in</a></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../js/icons.js?v=3"></script>
+
+  <script src="../js/components.js?v=3"></script>
+  <script src="../js/main.js?v=3"></script>
+  <script>
+    function switchTab(tab) {
+      const loginTab = document.getElementById('login-tab');
+      const registerTab = document.getElementById('register-tab');
+      const loginPanel = document.getElementById('login-panel');
+      const registerPanel = document.getElementById('register-panel');
+
+      // Side visual per tab — fresh photo for each mode
+      const visuals = {
+        login: {
+          src: 'https://i.pinimg.com/736x/f4/db/42/f4db42752bd8fa5ad75d557fc8e74e1e.jpg',
+          alt: 'Artisan dessert display for members signing in'
+        },
+        register: {
+          src: 'https://i.pinimg.com/736x/f1/12/06/f1120661a4b0ace6bcf715b8c3bc41b8.jpg',
+          alt: 'Celebration dessert spread for new members joining'
+        }
+      };
+      const visualImg = document.getElementById('auth-visual-img');
+      const visual = visuals[tab] || visuals.login;
+      if (visualImg && visualImg.getAttribute('src') !== visual.src) {
+        visualImg.style.opacity = '0';
+        setTimeout(() => {
+          visualImg.src = visual.src;
+          visualImg.alt = visual.alt;
+          visualImg.style.opacity = '1';
+        }, 250);
+      }
+
+      if (tab === 'login') {
+        loginTab.classList.add('active');
+        loginTab.setAttribute('aria-selected', 'true');
+        registerTab.classList.remove('active');
+        registerTab.setAttribute('aria-selected', 'false');
+        loginPanel.style.display = 'block';
+        registerPanel.style.display = 'none';
+      } else {
+        registerTab.classList.add('active');
+        registerTab.setAttribute('aria-selected', 'true');
+        loginTab.classList.remove('active');
+        loginTab.setAttribute('aria-selected', 'false');
+        registerPanel.style.display = 'block';
+        loginPanel.style.display = 'none';
+      }
+    }
+
+    function togglePassword(inputId, btn) {
+      const input = document.getElementById(inputId);
+      input.type = input.type === 'password' ? 'text' : 'password';
+      Icons.set(btn, input.type === 'password' ? 'eye' : 'eye-off');
+    }
+
+    function checkStrength(input) {
+      const val = input.value;
+      const fill = document.getElementById('strength-fill');
+      const label = document.getElementById('strength-label');
+      if (!fill) return;
+
+      let strength = 0;
+      if (val.length >= 8) strength++;
+      if (/[A-Z]/.test(val)) strength++;
+      if (/[0-9]/.test(val)) strength++;
+      if (/[^A-Za-z0-9]/.test(val)) strength++;
+
+      const levels = [
+        { color: '#e74c3c', label: 'Weak', width: '25%' },
+        { color: '#e67e22', label: 'Fair', width: '50%' },
+        { color: '#f39c12', label: 'Good', width: '75%' },
+        { color: '#27ae60', label: 'Strong', width: '100%' }
+      ];
+
+      if (strength > 0) {
+        const level = levels[strength - 1];
+        fill.style.width = level.width;
+        fill.style.background = level.color;
+        label.textContent = level.label;
+        label.style.color = level.color;
+      } else {
+        fill.style.width = '0';
+        label.textContent = '';
+      }
+    }
+  </script>
+</body>
+</html>

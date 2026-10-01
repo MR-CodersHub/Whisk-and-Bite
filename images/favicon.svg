@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="wbStick" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#D6B46A"/>
+      <stop offset="1" stop-color="#B03A63"/>
+    </linearGradient>
+    <linearGradient id="wbCandy" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F3A982"/>
+      <stop offset="1" stop-color="#B83B68"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#2B1D20"/>
+  <circle cx="32" cy="25" r="17" fill="url(#wbCandy)"/>
+  <path d="M32 9a16 16 0 0 1 12.6 6.1" fill="none" stroke="#F6E7D2" stroke-width="2.4" stroke-linecap="round" opacity=".55"/>
+  <path d="M21.5 20.5a15 15 0 0 0 7.2 12.6" fill="none" stroke="#7A1F3C" stroke-width="2.6" stroke-linecap="round" opacity=".5"/>
+  <rect x="29.2" y="38" width="5.6" height="19" rx="2.8" fill="url(#wbStick)"/>
+</svg>

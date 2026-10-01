@@ -1,0 +1,189 @@
+﻿﻿﻿﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Whisk &amp; Bite is down for a quick polish — we'll be back with fresh treats very soon. Tiny Treats, Big Moments." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Whisk & Bite" />
+  <meta property="og:title" content="Under Maintenance | Whisk &amp; Bite — Tiny Treats, Big Moments" />
+  <meta property="og:description" content="Whisk &amp; Bite is down for a quick polish — we'll be back with fresh treats very soon." />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Under Maintenance | Whisk &amp; Bite — Tiny Treats, Big Moments" />
+  <meta name="twitter:description" content="Whisk &amp; Bite is down for a quick polish — we'll be back with fresh treats very soon." />
+  <meta name="theme-color" content="#B83B68" />
+  <title>Under Maintenance | Whisk &amp; Bite — Tiny Treats, Big Moments</title>
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../css/main.css?v=3" />
+  <style>
+    .maintenance-page {
+      min-height: calc(100vh - var(--nav-height));
+      background: var(--cocoa);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .maintenance-visual {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .maintenance-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.6;
+    }
+
+    .maintenance-visual::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, transparent 0%, var(--cocoa) 100%);
+    }
+
+    .maintenance-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2.5rem 4rem 4rem 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1.1rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--champagne-lt);
+      background: rgba(214,180,106,0.12);
+      border: 1px solid rgba(214,180,106,0.35);
+      margin-bottom: 1.5rem;
+    }
+
+    .status-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--champagne);
+      animation: pulse-dot 1.6s ease-in-out infinite;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.8); }
+    }
+
+    .info-row {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      padding: 1rem 1.25rem;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-lg);
+      margin-bottom: 0.75rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .social-maintenance-btn {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(255,255,255,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: white;
+      transition: all var(--dur-normal);
+      cursor: pointer;
+    }
+
+    .social-maintenance-btn:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: var(--champagne);
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 768px) {
+      .maintenance-page { grid-template-columns: 1fr; }
+      .maintenance-visual { display: none; }
+      .maintenance-content { padding: 3rem 1.5rem; justify-content: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <div id="brandbar-placeholder" data-on-dark="true"></div>
+
+  <main class="maintenance-page" aria-labelledby="maintenance-title">
+    <!-- Visual -->
+    <div class="maintenance-visual" aria-hidden="true">
+      <img src="https://i.pinimg.com/1200x/23/82/d3/2382d38c60623dd56782bb768db29ae4.jpg" alt="Our artisan studio at work" loading="eager"/>
+    </div>
+
+    <!-- Content -->
+    <div class="maintenance-content">
+      <div><span class="status-pill"><span class="status-dot"></span> Scheduled Maintenance</span></div>
+
+      <h1 id="maintenance-title" style="font-size:clamp(2rem,5vw,3.8rem);font-weight:900;color:white;line-height:1.1;margin-bottom:1rem;">Polishing the<br/>Chocolate <em style="color:var(--champagne-lt);">— Back Soon</em></h1>
+
+      <p style="color:rgba(255,255,255,0.6);font-size:0.95rem;line-height:1.8;max-width:440px;margin-bottom:2rem;">We're giving the website a fresh coat of glaze — new photos, faster pages and a smoother ordering experience. Thanks for your patience; we'll be serving again very shortly.</p>
+
+      <!-- What to do meanwhile -->
+      <div style="margin-bottom:2rem;">
+        <div class="info-row">
+          <span style="font-size:1.4rem;flex-shrink:0;color:var(--champagne);"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-clock"></use></svg></span>
+          <div>
+            <div style="color:white;font-weight:700;font-size:0.9rem;margin-bottom:0.2rem;">How long?</div>
+            <div style="color:rgba(255,255,255,0.6);font-size:0.875rem;">Usually under an hour. Try refreshing in a little while.</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <span style="font-size:1.4rem;flex-shrink:0;color:var(--champagne);"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"></use></svg></span>
+          <div>
+            <div style="color:white;font-weight:700;font-size:0.9rem;margin-bottom:0.2rem;">Urgent order?</div>
+            <div style="color:rgba(255,255,255,0.6);font-size:0.875rem;">Call us at <a href="tel:+15551234567" style="color:var(--champagne-lt);font-weight:600;">+1 (555) 123-4567</a> or email <a href="mailto:hello@whiskandbite.com" style="color:var(--champagne-lt);font-weight:600;">hello@whiskandbite.com</a>.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1rem;">
+        <button class="btn btn-champagne" onclick="window.location.reload()" aria-label="Refresh the page">Refresh Page ↻</button>
+        <a href="../index.html" class="btn btn-ghost">Try Home →</a>
+      </div>
+
+      <!-- Social — generated from SITE so these can never drift or go dead -->
+      <div>
+        <p style="font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:1rem;">Follow Along Meanwhile</p>
+        <div class="social-links">
+          <div id="socials-placeholder" data-social-class="social-maintenance-btn" data-social-wrap="social-flat"></div>
+        </div>
+      </div>
+
+      <!-- Contact — same details as the footer, from the same source -->
+      <div style="margin-top:2rem;">
+        <p style="font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:1rem;">Get in Touch</p>
+        <div id="contact-placeholder" data-link-style="color:rgba(255,255,255,0.72);"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../js/icons.js?v=3"></script>
+  <script src="../js/components.js?v=3"></script>
+  <script src="../js/main.js?v=3"></script>
+</body>
+</html>

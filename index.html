@@ -1,0 +1,560 @@
+﻿﻿﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" data-nav="dark" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Premium artisan cake pops, brownie bites, mini cheesecakes and chocolate truffles. Custom dessert bites for every celebration. Tiny Treats, Big Moments." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Whisk & Bite" />
+  <meta property="og:title" content="Whisk &amp; Bite — Tiny Treats, Big Moments" />
+  <meta property="og:description" content="Premium artisan cake pops, brownie bites, mini cheesecakes and chocolate truffles. Custom dessert bites for every celebration. Tiny Treats, Big Moments." />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Whisk &amp; Bite — Tiny Treats, Big Moments" />
+  <meta name="twitter:description" content="Premium artisan cake pops, brownie bites, mini cheesecakes and chocolate truffles. Custom dessert bites for every celebration. Tiny Treats, Big Moments." />
+  <meta name="theme-color" content="#B83B68" />
+  <title>Whisk &amp; Bite — Tiny Treats, Big Moments</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/main.css?v=3" />
+</head>
+<body>
+
+  <!-- Nav -->
+  <div id="nav-placeholder"></div>
+
+  <!-- ════════════════════════════════════════════════════ -->
+  <!-- SECTION 1: HERO SLIDER -->
+  <!-- ════════════════════════════════════════════════════ -->
+  <section class="hero" aria-label="Hero Section">
+    <div class="hero-slides">
+
+      <!-- Slide 1 -->
+      <div class="hero-slide active" role="group" aria-roledescription="slide" aria-label="Slide 1 of 3">
+        <div class="hero-slide-bg" style="background-image: url('images/hero-cake-pops.jpg');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="hero-eyebrow">✦ Premium Artisan Desserts</p>
+          <h1 class="hero-title">Bite-Sized<br/><em>Moments of</em><br/>Pure Joy</h1>
+          <p class="hero-subtitle">Handcrafted cake pops, truffles & dessert bites made with passion, premium ingredients, and an eye for beauty.</p>
+          <div class="hero-actions">
+            <a href="pages/services.html" class="btn btn-primary btn-xl">Explore Our Bites <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cake-slice"></use></svg></a>
+            <a href="pages/contact.html" class="btn btn-ghost btn-xl">Custom Order ✦</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="hero-slide" role="group" aria-roledescription="slide" aria-label="Slide 2 of 3">
+        <div class="hero-slide-bg" style="background-image: url('images/wedding-dessert-table.jpg');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="hero-eyebrow">✦ Celebrate in Style</p>
+          <h1 class="hero-title"><em>Your</em> Dream<br/>Dessert Table<br/>Awaits</h1>
+          <p class="hero-subtitle">Elevate your wedding, birthday or corporate event with stunning bespoke dessert displays.</p>
+          <div class="hero-actions">
+            <a href="pages/service-details.html" class="btn btn-primary btn-xl">Plan Your Event <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-bouquet"></use></svg></a>
+            <a href="pages/pricing.html" class="btn btn-ghost btn-xl">View Packages</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="hero-slide" role="group" aria-roledescription="slide" aria-label="Slide 3 of 3">
+        <div class="hero-slide-bg" style="background-image: url('images/party-dessert-box.jpg');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="hero-eyebrow">✦ Gift Something Extraordinary</p>
+          <h1 class="hero-title">The Most<br/><em>Indulgent</em><br/>Gift Box</h1>
+          <p class="hero-subtitle">Luxurious dessert gift boxes curated with our finest bites — the perfect present for someone special.</p>
+          <div class="hero-actions">
+            <a href="pages/services.html" class="btn btn-primary btn-xl">Shop Gift Boxes <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-gift"></use></svg></a>
+            <a href="pages/about.html" class="btn btn-ghost btn-xl">Our Story</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slider Controls -->
+    <div class="slider-arrows" aria-label="Slider navigation">
+      <button class="slider-arrow slider-prev" aria-label="Previous slide">‹</button>
+      <button class="slider-arrow slider-next" aria-label="Next slide">›</button>
+    </div>
+    <div class="slider-dots" role="tablist" aria-label="Slide indicators">
+      <button class="slider-dot active" role="tab" aria-label="Go to slide 1" aria-selected="true"></button>
+      <button class="slider-dot" role="tab" aria-label="Go to slide 2" aria-selected="false"></button>
+      <button class="slider-dot" role="tab" aria-label="Go to slide 3" aria-selected="false"></button>
+    </div>
+
+    <!-- Scroll hint -->
+    <div style="position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:0.5rem;animation:float 2s ease-in-out infinite;">
+      <span style="font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.6);">Scroll</span>
+      <span style="color:rgba(255,255,255,0.6);font-size:1.2rem;">↓</span>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════ -->
+  <!-- MARQUEE TICKER -->
+  <!-- ════════════════════════════════════════════════════ -->
+  <div class="marquee-wrapper" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="marquee-item"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cake-slice"></use></svg> Cake Pops <span class="marquee-dot"></span></span>
+      <span class="marquee-item"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chocolate"></use></svg> Chocolate Truffles <span class="marquee-dot"></span></span>
+      <span class="marquee-item"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cupcake"></use></svg> Brownie Bites <span class="marquee-dot"></span></span>
+      <span class="marquee-item"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-pudding"></use></svg> Mini Cheesecakes <span class="marquee-dot"></span></span>
+      <span class="marquee-item"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-birthday-cake"></use></svg> Custom Orders <span class="marquee-dot"></span></span>
+      <span class="marquee-item"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-gift"></use></svg> Gift Boxes <span class="marquee-dot"></span></span>
+      <span class="marquee-item"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-wedding"></use></svg> Wedding Desserts <span class="marquee-dot"></span></span>
+      <span class="marquee-item"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-party-popper"></use></svg> Party Catering <span class="marquee-dot"></span></span>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════ -->
+  <!-- SECTION 2: FEATURED COLLECTIONS -->
+  <!-- ════════════════════════════════════════════════════ -->
+  <section class="section" id="collections" aria-labelledby="collections-title">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="eyebrow center">Our Creations</div>
+        <h2 class="section-title" id="collections-title">Artisan Bites <em>That</em><br/>Steal the Show</h2>
+        <p class="section-subtitle">Every bite tells a story of passion, precision and premium ingredients sourced from around the world.</p>
+      </div>
+
+      <!-- Bento-style asymmetric grid -->
+      <div style="display:grid;grid-template-columns:repeat(12,1fr);grid-template-rows:auto;gap:1.25rem;" aria-label="Product collection grid">
+
+        <!-- Large featured: Cake Pops -->
+        <article class="product-card reveal" style="grid-column:span 7;grid-row:span 2;" data-category="cake-pops">
+          <div class="product-img-wrap" style="height:420px;">
+            <img class="product-card-img" src="https://i.pinimg.com/736x/50/02/0e/50020eab0cc909e208f602d61e9b5828.jpg" alt="Signature red velvet cake pops with white chocolate drizzle, one cut open to show the filling" style="height:100%;aspect-ratio:unset;" loading="lazy"/>
+            <div class="badge badge-raspberry" style="position:absolute;top:1.25rem;left:1.25rem;z-index:2;">✦ Bestseller</div>
+            <div class="gallery-overlay">
+              <span style="color:white;font-size:0.8rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;">Cake Pops Collection →</span>
+            </div>
+          </div>
+          <div class="product-card-body">
+            <h3 class="product-name">Signature Cake Pops</h3>
+            <p class="product-desc">Our crown jewel — rich cake on a stick, enrobed in premium Belgian chocolate, hand-decorated with gold leaf, fruit & edible art.</p>
+            <div class="product-footer">
+              <div class="product-price">From $3.50 <span>/ pop</span></div>
+              <a href="pages/service-details.html" class="btn btn-primary btn-sm">Order →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Brownie Bites -->
+        <article class="product-card reveal reveal-delay-2" style="grid-column:span 5;" data-category="brownies">
+          <div class="product-img-wrap" style="height:220px;">
+            <img class="product-card-img" src="images/brownie-bites.jpg" alt="Gourmet fudgy brownie bites on marble surface" style="height:100%;aspect-ratio:unset;" loading="lazy"/>
+            <div class="badge badge-champagne" style="position:absolute;top:1.25rem;left:1.25rem;z-index:2;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-trophy"></use></svg> Award Winning</div>
+          </div>
+          <div class="product-card-body">
+            <h3 class="product-name">Fudge Brownie Bites</h3>
+            <p class="product-desc">Impossibly fudgy with caramel, raspberry, and gold-dust toppings.</p>
+            <div class="product-footer">
+              <div class="product-price">From $2.80 <span>/ bite</span></div>
+              <a href="pages/services.html" class="btn btn-secondary btn-sm">Explore</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Mini Cheesecakes -->
+        <article class="product-card reveal reveal-delay-3" style="grid-column:span 5;" data-category="cheesecakes">
+          <div class="product-img-wrap" style="height:220px;">
+            <img class="product-card-img" src="images/mini-cheesecakes.jpg" alt="Mini cheesecakes with fruit toppings on gold tray" style="height:100%;aspect-ratio:unset;" loading="lazy"/>
+            <div class="badge badge-pistachio" style="position:absolute;top:1.25rem;left:1.25rem;z-index:2;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-leaf"></use></svg> New Season</div>
+          </div>
+          <div class="product-card-body">
+            <h3 class="product-name">Mini Cheesecakes</h3>
+            <p class="product-desc">Silky cream cheese, golden crust, crowned with seasonal fruits.</p>
+            <div class="product-footer">
+              <div class="product-price">From $4.20 <span>/ piece</span></div>
+              <a href="pages/services.html" class="btn btn-secondary btn-sm">Explore</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div style="text-align:center;margin-top:3rem;" class="reveal">
+        <a href="pages/services.html" class="btn btn-primary btn-lg">View Full Menu →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════ -->
+  <!-- SECTION 3: WHY CHOOSE US (FEATURES) -->
+  <!-- ════════════════════════════════════════════════════ -->
+  <section class="section" style="background:var(--bg-secondary);" aria-labelledby="features-title">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;">
+        <!-- Left: Image composition -->
+        <div class="reveal-left" style="position:relative;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+            <img src="images/baker-studio.jpg" alt="Our artisan baker decorating cake pops in the studio" style="border-radius:20px;height:320px;object-fit:cover;width:100%;" loading="lazy"/>
+            <div style="display:flex;flex-direction:column;gap:1rem;padding-top:3rem;">
+              <img src="images/custom-cake-pop-design.jpg" alt="Hand-painted custom cake pop designs" style="border-radius:20px;height:180px;object-fit:cover;width:100%;" loading="lazy"/>
+              <div style="background:linear-gradient(135deg,var(--raspberry),var(--raspberry-dk));border-radius:20px;padding:1.5rem;color:white;text-align:center;">
+                <div style="font-family:var(--font-display);font-size:2.5rem;font-weight:900;line-height:1;">8+</div>
+                <div style="font-size:0.8rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;opacity:0.85;margin-top:0.5rem;">Years of Craft</div>
+              </div>
+            </div>
+          </div>
+          <!-- Floating badge -->
+          <div style="position:absolute;bottom:-1.5rem;left:1.5rem;background:var(--bg-card);border-radius:16px;padding:1rem 1.5rem;box-shadow:var(--shadow-lg);display:flex;align-items:center;gap:1rem;border:1px solid var(--border);">
+            <span style="font-size:2rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"></use></svg></span>
+            <div>
+              <div style="font-family:var(--font-display);font-size:1.3rem;font-weight:800;color:var(--champagne);">4.9/5</div>
+              <div style="font-size:0.75rem;color:var(--text-muted);font-weight:600;">500+ Verified Reviews</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Content -->
+        <div class="reveal-right">
+          <div class="eyebrow no-line">Why Choose Us</div>
+          <h2 class="section-title" id="features-title">Where <em>Artistry</em><br/>Meets Flavour</h2>
+          <p style="color:var(--text-muted);line-height:1.8;margin-bottom:2.5rem;">We don't just make desserts — we craft experiences. Each bite is a tiny canvas, each box a curated gallery of flavour and beauty.</p>
+
+          <div style="display:flex;flex-direction:column;gap:1.5rem;">
+            <div style="display:flex;gap:1.25rem;align-items:flex-start;">
+              <div class="feature-icon raspberry"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chocolate"></use></svg></div>
+              <div>
+                <h4 style="font-size:1.1rem;font-weight:700;margin-bottom:0.4rem;">Belgian Chocolate & Premium Ingredients</h4>
+                <p style="font-size:0.9rem;color:var(--text-muted);">We use only the finest couverture chocolate, organic cream, and fresh seasonal produce — no compromise.</p>
+              </div>
+            </div>
+            <div style="display:flex;gap:1.25rem;align-items:flex-start;">
+              <div class="feature-icon pistachio"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-palette"></use></svg></div>
+              <div>
+                <h4 style="font-size:1.1rem;font-weight:700;margin-bottom:0.4rem;">Hand-Painted & Custom Designs</h4>
+                <p style="font-size:0.9rem;color:var(--text-muted);">Each cake pop is a tiny masterpiece — painted by hand with edible colours, gold leaf, and intricate detail.</p>
+              </div>
+            </div>
+            <div style="display:flex;gap:1.25rem;align-items:flex-start;">
+              <div class="feature-icon champagne"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-package"></use></svg></div>
+              <div>
+                <h4 style="font-size:1.1rem;font-weight:700;margin-bottom:0.4rem;">Luxury Gift Packaging</h4>
+                <p style="font-size:0.9rem;color:var(--text-muted);">Premium pink & gold boxes with wax seals, satin ribbons, and personalised cards — the unboxing is part of the experience.</p>
+              </div>
+            </div>
+            <div style="display:flex;gap:1.25rem;align-items:flex-start;">
+              <div class="feature-icon peach"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-rocket"></use></svg></div>
+              <div>
+                <h4 style="font-size:1.1rem;font-weight:700;margin-bottom:0.4rem;">Made Fresh, Delivered Fast</h4>
+                <p style="font-size:0.9rem;color:var(--text-muted);">Every order baked fresh to order and delivered in temperature-controlled packaging within 24–48 hours.</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:2.5rem;">
+            <a href="pages/about.html" class="btn btn-primary btn-lg">Our Story →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════ -->
+  <!-- SECTION 4: OCCASION PRODUCTS (FILTERED SHOWCASE) -->
+  <!-- ════════════════════════════════════════════════════ -->
+  <section class="section" aria-labelledby="occasions-title">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="eyebrow center">By Occasion</div>
+        <h2 class="section-title" id="occasions-title">Desserts for <em>Every</em><br/>Celebration</h2>
+        <p class="section-subtitle">Whether it's a grand wedding or an intimate gathering — we have the perfect sweet moment.</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs reveal" role="tablist" aria-label="Filter by occasion" data-filter-target="#occasion-grid">
+        <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">All Occasions</button>
+        <button class="filter-tab" data-filter="wedding" role="tab" aria-selected="false"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-wedding"></use></svg> Weddings</button>
+        <button class="filter-tab" data-filter="birthday" role="tab" aria-selected="false"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-birthday-cake"></use></svg> Birthdays</button>
+        <button class="filter-tab" data-filter="corporate" role="tab" aria-selected="false"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-building"></use></svg> Corporate</button>
+        <button class="filter-tab" data-filter="gifting" role="tab" aria-selected="false"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-gift"></use></svg> Gifting</button>
+      </div>
+
+      <div class="grid-3" id="occasion-grid">
+        <article class="card reveal reveal-delay-1" data-category="wedding" aria-label="Wedding cake pops">
+          <div class="card-img-wrapper">
+            <img class="card-img" src="https://i.pinimg.com/736x/2a/69/38/2a69388d48bf5592b79c13d455273226.jpg" alt="Elegant wedding dessert table styled for a celebration" loading="lazy"/>
+            <div class="badge badge-raspberry" style="position:absolute;top:1rem;left:1rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-wedding"></use></svg> Weddings</div>
+          </div>
+          <div class="card-body">
+            <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.5rem;">Wedding Dessert Table</h3>
+            <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:1.25rem;">Full dessert table setup with tiered displays, personalised cake pops, mini cheesecakes and elegant packaging.</p>
+            <a href="pages/service-details.html" class="btn btn-secondary btn-sm">Learn More →</a>
+          </div>
+        </article>
+
+        <article class="card reveal reveal-delay-2" data-category="wedding" aria-label="Monogrammed wedding cake pops">
+          <div class="card-img-wrapper">
+            <img class="card-img" src="https://i.pinimg.com/736x/97/71/4a/97714a2e92be6d97ae9978fc25420ee6.jpg" alt="Hand-decorated monogrammed wedding cake pops" loading="lazy"/>
+            <div class="badge badge-raspberry" style="position:absolute;top:1rem;left:1rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-wedding"></use></svg> Weddings</div>
+          </div>
+          <div class="card-body">
+            <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.5rem;">Monogrammed Cake Pops</h3>
+            <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:1.25rem;">Hand-painted monograms, wedding colours and delicate florals matched to your invitations and décor.</p>
+            <a href="pages/service-details.html" class="btn btn-secondary btn-sm">Learn More →</a>
+          </div>
+        </article>
+
+        <article class="card reveal reveal-delay-3" data-category="wedding" aria-label="Petite wedding cheesecake tower">
+          <div class="card-img-wrapper">
+            <img class="card-img" src="https://i.pinimg.com/736x/16/35/99/16359938b6ffd75e5644cf1821a623df.jpg" alt="Petite cheesecakes arranged as an elegant wedding tower" loading="lazy"/>
+            <div class="badge badge-raspberry" style="position:absolute;top:1rem;left:1rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-wedding"></use></svg> Weddings</div>
+          </div>
+          <div class="card-body">
+            <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.5rem;">Petite Cheesecake Tower</h3>
+            <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:1.25rem;">Tiered mini cheesecakes crowned with seasonal fruit for an elegant alternative to a cutting cake.</p>
+            <a href="pages/services.html" class="btn btn-secondary btn-sm">Learn More →</a>
+          </div>
+        </article>
+
+        <article class="card reveal reveal-delay-2" data-category="birthday" aria-label="Birthday celebration pops">
+          <div class="card-img-wrapper">
+            <img class="card-img" src="https://i.pinimg.com/736x/03/6a/0a/036a0ab987e8cecca1045fe1649eb2cc.jpg" alt="Colourful birthday cake pop bouquet styled for a celebration" loading="lazy"/>
+            <div class="badge badge-peach" style="position:absolute;top:1rem;left:1rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-birthday-cake"></use></svg> Birthday</div>
+          </div>
+          <div class="card-body">
+            <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.5rem;">Birthday Bouquets</h3>
+            <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:1.25rem;">Bright, joyful cake pop bouquets with custom sprinkles, age numbers, and your favourite flavours.</p>
+            <a href="pages/service-details.html" class="btn btn-secondary btn-sm">Learn More →</a>
+          </div>
+        </article>
+
+        <article class="card reveal reveal-delay-3" data-category="birthday" aria-label="Confetti birthday dessert box">
+          <div class="card-img-wrapper">
+            <img class="card-img" src="images/party-dessert-box.jpg" alt="Confetti birthday dessert box with assorted bites" loading="lazy"/>
+            <div class="badge badge-peach" style="position:absolute;top:1rem;left:1rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-birthday-cake"></use></svg> Birthday</div>
+          </div>
+          <div class="card-body">
+            <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.5rem;">Confetti Party Box</h3>
+            <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:1.25rem;">A ready-to-serve assortment of pops, bites and truffles in festive birthday packaging.</p>
+            <a href="pages/services.html" class="btn btn-secondary btn-sm">Learn More →</a>
+          </div>
+        </article>
+
+        <article class="card reveal reveal-delay-1" data-category="birthday" aria-label="Shareable birthday brownie dozen">
+          <div class="card-img-wrapper">
+            <img class="card-img" src="https://i.pinimg.com/736x/ea/67/56/ea675642ff62f9186f0868506fc85bf9.jpg" alt="Shareable chocolate brownie bites arranged for a birthday party" loading="lazy"/>
+            <div class="badge badge-peach" style="position:absolute;top:1rem;left:1rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-birthday-cake"></use></svg> Birthday</div>
+          </div>
+          <div class="card-body">
+            <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.5rem;">Shareable Brownie Dozen</h3>
+            <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:1.25rem;">Fudgy caramel, raspberry and gold-dust brownies sized for parties and easy sharing.</p>
+            <a href="pages/services.html" class="btn btn-secondary btn-sm">Learn More →</a>
+          </div>
+        </article>
+
+        <article class="card reveal reveal-delay-2" data-category="corporate" aria-label="Branded corporate client gifts">
+          <div class="card-img-wrapper">
+            <img class="card-img" src="images/packaging-closeup.jpg" alt="Premium branded corporate dessert packaging with wax seal" loading="lazy"/>
+            <div class="badge badge-champagne" style="position:absolute;top:1rem;left:1rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-building"></use></svg> Corporate</div>
+          </div>
+          <div class="card-body">
+            <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.5rem;">Branded Client Gifts</h3>
+            <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:1.25rem;">Logo-matched packaging and polished assortments for clients, partners and executive gifting.</p>
+            <a href="pages/services.html" class="btn btn-secondary btn-sm">Learn More →</a>
+          </div>
+        </article>
+
+        <article class="card reveal reveal-delay-3" data-category="corporate" aria-label="Boardroom dessert platters">
+          <div class="card-img-wrapper">
+            <img class="card-img" src="https://i.pinimg.com/736x/90/9e/29/909e29cf76cdae12f7a0278da9be78ef.jpg" alt="Elegant platter of desserts styled for a corporate boardroom" loading="lazy"/>
+            <div class="badge badge-champagne" style="position:absolute;top:1rem;left:1rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-building"></use></svg> Corporate</div>
+          </div>
+          <div class="card-body">
+            <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.5rem;">Boardroom Dessert Platters</h3>
+            <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:1.25rem;">Neat, mess-free cake pops and truffles presented for meetings, launches and conferences.</p>
+            <a href="pages/service-details.html" class="btn btn-secondary btn-sm">Learn More →</a>
+          </div>
+        </article>
+
+        <article class="card reveal reveal-delay-1" data-category="corporate" aria-label="Corporate tasting flights">
+          <div class="card-img-wrapper">
+            <img class="card-img" src="https://i.pinimg.com/1200x/75/58/a1/7558a1e4e0e64a79ce5bbcddc70f1518.jpg" alt="Curated dessert tasting flight for corporate event planning" loading="lazy"/>
+            <div class="badge badge-champagne" style="position:absolute;top:1rem;left:1rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-building"></use></svg> Corporate</div>
+          </div>
+          <div class="card-body">
+            <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.5rem;">Event Tasting Flights</h3>
+            <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:1.25rem;">Curated flavour samplers help planners choose the right menu for large corporate orders.</p>
+            <a href="pages/services.html" class="btn btn-secondary btn-sm">Learn More →</a>
+          </div>
+        </article>
+
+        <article class="card reveal reveal-delay-3" data-category="gifting" aria-label="Premium gift dessert boxes">
+          <div class="card-img-wrapper">
+            <img class="card-img" src="https://i.pinimg.com/736x/f3/de/ca/f3decaf58c5c8712752cc5b2608b49ed.jpg" alt="Luxury gift box filled with assorted dessert bites" loading="lazy"/>
+            <div class="badge badge-champagne" style="position:absolute;top:1rem;left:1rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-gift"></use></svg> Gifting</div>
+          </div>
+          <div class="card-body">
+            <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.5rem;">Luxury Gift Boxes</h3>
+            <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:1.25rem;">Curated dessert boxes with a mix of our finest bites, gift-wrapped in our signature pink & gold packaging.</p>
+            <a href="pages/services.html" class="btn btn-secondary btn-sm">Shop Gift Boxes →</a>
+          </div>
+        </article>
+
+        <article class="card reveal reveal-delay-1" data-category="gifting" aria-label="Signature cake pop gift set">
+          <div class="card-img-wrapper">
+            <img class="card-img" src="https://i.pinimg.com/1200x/bb/c9/f4/bbc9f45e26f29c078767310f09411d53.jpg" alt="Signature red velvet cake pop gift set" loading="lazy"/>
+            <div class="badge badge-champagne" style="position:absolute;top:1rem;left:1rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-gift"></use></svg> Gifting</div>
+          </div>
+          <div class="card-body">
+            <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.5rem;">Signature Pop Gift Set</h3>
+            <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:1.25rem;">Our bestselling red velvet pops arranged as a ready-to-give celebration set.</p>
+            <a href="pages/service-details.html" class="btn btn-secondary btn-sm">Shop Gift Boxes →</a>
+          </div>
+        </article>
+
+        <article class="card reveal reveal-delay-2" data-category="gifting" aria-label="Build your own flavour gift box">
+          <div class="card-img-wrapper">
+            <img class="card-img" src="https://i.pinimg.com/1200x/9c/46/84/9c46843f7024c364301686e5472bd939.jpg" alt="Assorted dessert flavours for a build-your-own gift box" loading="lazy"/>
+            <div class="badge badge-champagne" style="position:absolute;top:1rem;left:1rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-gift"></use></svg> Gifting</div>
+          </div>
+          <div class="card-body">
+            <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.5rem;">Build-Your-Own Flavour Box</h3>
+            <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:1.25rem;">Choose favourite flavours and finishes for a personalised dessert gift.</p>
+            <a href="pages/services.html" class="btn btn-secondary btn-sm">Shop Gift Boxes →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════ -->
+  <!-- SECTION 5: STATS + TESTIMONIALS -->
+  <!-- ════════════════════════════════════════════════════ -->
+  <section class="section" style="background:var(--cocoa);overflow:hidden;position:relative;" aria-labelledby="testimonials-title">
+    <!-- Decorative blob -->
+    <div style="position:absolute;width:500px;height:500px;background:rgba(184,59,104,0.1);border-radius:60% 40% 30% 70% / 60% 30% 70% 40%;top:-100px;right:-100px;pointer-events:none;"></div>
+
+    <div class="container" style="position:relative;z-index:1;">
+      <!-- Stats Row -->
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-bottom:5rem;text-align:center;" class="reveal">
+        <div>
+          <div class="stat-number" data-count="15000" data-suffix="+">0</div>
+          <div class="stat-label" style="color:rgba(255,255,255,0.5);">Bites Crafted</div>
+        </div>
+        <div>
+          <div class="stat-number" data-count="500" data-suffix="+">0</div>
+          <div class="stat-label" style="color:rgba(255,255,255,0.5);">Happy Clients</div>
+        </div>
+        <div>
+          <div class="stat-number" data-count="8">0</div>
+          <div class="stat-label" style="color:rgba(255,255,255,0.5);">Years of Craft</div>
+        </div>
+        <div>
+          <div class="stat-number" data-count="18">0</div>
+          <div class="stat-label" style="color:rgba(255,255,255,0.5);">Signature Flavours</div>
+        </div>
+      </div>
+
+      <!-- Testimonials -->
+      <div class="section-header reveal" style="max-width:600px;">
+        <div class="eyebrow center" style="color:var(--champagne);">What Clients Say</div>
+        <h2 class="section-title" id="testimonials-title" style="color:white;">Sweet <em>Words</em> From<br/>Our Community</h2>
+      </div>
+
+      <div class="grid-3">
+        <article class="testimonial-card reveal reveal-delay-1" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.1);" aria-label="Testimonial from Sophie R.">
+          <div class="stars" aria-label="5 stars"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"></use></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"></use></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"></use></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"></use></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"></use></svg></div>
+          <p class="testimonial-text" style="color:rgba(255,255,255,0.85);">"Absolute perfection. My wedding cake pops were hand-painted with our monogram and tasted absolutely divine. Every guest was asking where they came from!"</p>
+          <div class="testimonial-author">
+            <div style="width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--raspberry),var(--champagne));display:flex;align-items:center;justify-content:center;font-size:1.5rem;border:3px solid var(--champagne);"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-user"></use></svg></div>
+            <div>
+              <div class="testimonial-name" style="color:var(--buttercream);">Sophie R.</div>
+              <div class="testimonial-role">Bride, Summer Wedding 2026</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card reveal reveal-delay-2" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.1);" aria-label="Testimonial from Marcus L.">
+          <div class="stars" aria-label="5 stars"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"></use></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"></use></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"></use></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"></use></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"></use></svg></div>
+          <p class="testimonial-text" style="color:rgba(255,255,255,0.85);">"Ordered 200 truffles for our corporate event and the feedback was incredible. The packaging alone made a statement. Premium through and through."</p>
+          <div class="testimonial-author">
+            <div style="width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--pistachio-dk),var(--pistachio));display:flex;align-items:center;justify-content:center;font-size:1.5rem;border:3px solid var(--champagne);"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-briefcase"></use></svg></div>
+            <div>
+              <div class="testimonial-name" style="color:var(--buttercream);">Marcus L.</div>
+              <div class="testimonial-role">Events Manager, TechCorp</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card reveal reveal-delay-3" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.1);" aria-label="Testimonial from Priya M.">
+          <div class="stars" aria-label="5 stars"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"></use></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"></use></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"></use></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"></use></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"></use></svg></div>
+          <p class="testimonial-text" style="color:rgba(255,255,255,0.85);">"I sent a gift box to my sister in another city and she cried when she opened it — so beautiful and SO delicious. The raspberry truffle is life-changing."</p>
+          <div class="testimonial-author">
+            <div style="width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--peach),var(--raspberry-lt));display:flex;align-items:center;justify-content:center;font-size:1.5rem;border:3px solid var(--champagne);"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-heart-ribbon"></use></svg></div>
+            <div>
+              <div class="testimonial-name" style="color:var(--buttercream);">Priya M.</div>
+              <div class="testimonial-role">Loyal Customer, 3 Years</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════ -->
+  <!-- SECTION 6: INGREDIENTS & GALLERY CTA -->
+  <!-- ════════════════════════════════════════════════════ -->
+  <section class="section" style="background:var(--bg-secondary);" aria-labelledby="ingredients-title">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
+        <!-- Content -->
+        <div class="reveal-left">
+          <div class="eyebrow no-line">Our Promise</div>
+          <h2 class="section-title" id="ingredients-title">Premium Ingredients,<br/><em>Always.</em></h2>
+          <p style="color:var(--text-muted);line-height:1.8;margin-bottom:2rem;">We source the finest ingredients from trusted suppliers worldwide — Belgian couverture chocolate, Madagascan vanilla, organic berries, and edible 24-karat gold.</p>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:2.5rem;">
+            <div style="padding:1.25rem;background:var(--bg-card);border-radius:16px;border:1px solid var(--border);">
+              <div style="font-size:1.8rem;margin-bottom:0.5rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chocolate"></use></svg></div>
+              <div style="font-weight:700;font-size:0.9rem;margin-bottom:0.25rem;">Belgian Chocolate</div>
+              <p style="font-size:0.8rem;color:var(--text-muted);">72% single-origin couverture</p>
+            </div>
+            <div style="padding:1.25rem;background:var(--bg-card);border-radius:16px;border:1px solid var(--border);">
+              <div style="font-size:1.8rem;margin-bottom:0.5rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-leaf"></use></svg></div>
+              <div style="font-weight:700;font-size:0.9rem;margin-bottom:0.25rem;">Madagascan Vanilla</div>
+              <p style="font-size:0.8rem;color:var(--text-muted);">Pure artisan vanilla extract</p>
+            </div>
+            <div style="padding:1.25rem;background:var(--bg-card);border-radius:16px;border:1px solid var(--border);">
+              <div style="font-size:1.8rem;margin-bottom:0.5rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-blueberry"></use></svg></div>
+              <div style="font-weight:700;font-size:0.9rem;margin-bottom:0.25rem;">Fresh Organic Berries</div>
+              <p style="font-size:0.8rem;color:var(--text-muted);">Locally sourced, seasonal</p>
+            </div>
+            <div style="padding:1.25rem;background:var(--bg-card);border-radius:16px;border:1px solid var(--border);">
+              <div style="font-size:1.8rem;margin-bottom:0.5rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-sparkles"></use></svg></div>
+              <div style="font-weight:700;font-size:0.9rem;margin-bottom:0.25rem;">Edible 24K Gold</div>
+              <p style="font-size:0.8rem;color:var(--text-muted);">Food-safe gold leaf & dust</p>
+            </div>
+          </div>
+
+          <a href="pages/about.html" class="btn btn-primary btn-lg">Our Ingredient Story →</a>
+        </div>
+
+        <!-- Image -->
+        <div class="reveal-right">
+          <div style="position:relative;">
+            <img src="images/ingredients-flatlay.jpg" alt="Premium baking ingredients: Belgian chocolate, vanilla beans, raspberries, pistachios, edible gold" style="border-radius:24px;width:100%;height:500px;object-fit:cover;box-shadow:var(--shadow-xl);" loading="lazy"/>
+            <div style="position:absolute;inset:0;border-radius:24px;background:linear-gradient(to top,rgba(43,29,32,0.3) 0%,transparent 50%);"></div>
+            <div style="position:absolute;bottom:2rem;left:2rem;right:2rem;background:rgba(255,255,255,0.12);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.25);border-radius:16px;padding:1.25rem;">
+              <div style="color:white;font-size:0.75rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.4rem;opacity:0.7;">Our Promise</div>
+              <div style="color:white;font-family:var(--font-display);font-size:1.15rem;font-weight:700;">No artificial colours, no preservatives.<br/>Just pure, honest ingredients.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script src="js/icons.js?v=3"></script>
+  <script src="js/components.js?v=3"></script>
+  <script src="js/main.js?v=3"></script>
+</body>
+</html>

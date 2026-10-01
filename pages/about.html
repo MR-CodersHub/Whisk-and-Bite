@@ -1,0 +1,404 @@
+﻿﻿﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" data-nav="dark" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Whisk &amp; Bite — Our story, our team, our passion for handcrafted artisan desserts. Tiny Treats, Big Moments." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Whisk & Bite" />
+  <meta property="og:title" content="About Us | Whisk &amp; Bite — Tiny Treats, Big Moments" />
+  <meta property="og:description" content="About Whisk &amp; Bite — Our story, our team, our passion for handcrafted artisan desserts. Tiny Treats, Big Moments." />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About Us | Whisk &amp; Bite — Tiny Treats, Big Moments" />
+  <meta name="twitter:description" content="About Whisk &amp; Bite — Our story, our team, our passion for handcrafted artisan desserts. Tiny Treats, Big Moments." />
+  <meta name="theme-color" content="#B83B68" />
+  <title>About Us | Whisk &amp; Bite — Tiny Treats, Big Moments</title>
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../css/main.css?v=3" />
+  <style>
+    .about-hero {
+      min-height: 70vh;
+      height: auto;
+      padding-top: calc(var(--nav-height) + 4rem);
+      padding-bottom: 4rem;
+      background: url('../images/baker-studio.jpg') center/cover no-repeat;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 1fr 80px 1fr;
+      gap: 0;
+      align-items: start;
+      margin-bottom: 3rem;
+    }
+
+    .timeline-line {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    .timeline-dot {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--raspberry), var(--raspberry-dk));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 16px rgba(184,59,104,0.4);
+      flex-shrink: 0;
+      z-index: 1;
+    }
+
+    .timeline-connector {
+      width: 2px;
+      flex: 1;
+      min-height: 60px;
+      background: linear-gradient(to bottom, var(--raspberry), transparent);
+    }
+
+    .timeline-content {
+      padding: 0 2rem 2rem;
+    }
+
+    .timeline-year {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 900;
+      color: var(--raspberry);
+      margin-bottom: 0.5rem;
+    }
+
+    .team-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      border: 1px solid var(--border);
+      transition: all var(--dur-normal) var(--ease-smooth);
+      text-align: center;
+    }
+
+    .team-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-xl); }
+
+    .team-img-wrap {
+      height: 280px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .team-img-wrap::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(43,29,32,0.6) 0%, transparent 60%);
+    }
+
+    .team-body { padding: 1.5rem; }
+
+    .value-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-card);
+      padding: 2rem;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-card);
+      text-align: center;
+      transition: all var(--dur-normal);
+    }
+
+    .value-card:hover { transform: translateY(-4px); border-color: var(--raspberry); box-shadow: var(--shadow-xl); }
+
+    @media (max-width: 768px) {
+      .timeline-item { grid-template-columns: 1fr; }
+      .timeline-line { display: none; }
+      .timeline-content { padding: 0 0 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <!-- ════════════════════════════ -->
+  <!-- SECTION 1: ABOUT HERO -->
+  <!-- ════════════════════════════ -->
+  <section class="about-hero" aria-labelledby="about-hero-title">
+    <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(43,29,32,0.92) 0%,rgba(43,29,32,0.78) 20%,rgba(43,29,32,0.5) 55%,rgba(43,29,32,0.32) 100%);"></div>
+    <div class="container" style="position:relative;z-index:1;">
+      <p class="hero-eyebrow" style="animation-delay:0.2s;">Our Story</p>
+      <h1 class="hero-title" id="about-hero-title" style="animation-delay:0.4s;max-width:700px;">Made with Love,<br/><em>Served with</em><br/>Elegance</h1>
+      <p class="hero-subtitle" style="animation-delay:0.6s;">A boutique dessert atelier born from a lifelong passion for the art of baking — where every bite is a small celebration.</p>
+    </div>
+  </section>
+
+  <!-- Breadcrumb -->
+  <div style="background:var(--bg-secondary);padding:1rem 0;border-bottom:1px solid var(--border);" aria-label="Breadcrumb">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol style="display:flex;gap:0.5rem;font-size:0.8rem;color:var(--text-muted);list-style:none;">
+          <li><a href="../index.html" style="color:var(--raspberry);">Home</a></li>
+          <li style="color:var(--mid-gray);">/</li>
+          <li aria-current="page">About Us</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════ -->
+  <!-- SECTION 2: FOUNDER STORY -->
+  <!-- ════════════════════════════ -->
+  <section class="section" aria-labelledby="founder-title">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;">
+        <div class="reveal-left">
+          <div class="eyebrow no-line">The Beginning</div>
+          <h2 class="section-title" id="founder-title">From a <em>Home Kitchen</em><br/>to a Sweet Empire</h2>
+          <p style="color:var(--text-muted);line-height:1.9;margin-bottom:1.5rem;">Whisk & Bite began in 2018 in founder <strong>Amelia Chen's</strong> tiny apartment kitchen. Armed with a piping bag and an obsession with Belgian chocolate, she started hand-crafting cake pops for friends' events.</p>
+          <p style="color:var(--text-muted);line-height:1.9;margin-bottom:1.5rem;">Word spread quickly. By 2020, Amelia had her first studio space. By 2022, Whisk & Bite was the go-to dessert atelier for luxury weddings and corporate events across the city.</p>
+          <p style="color:var(--text-muted);line-height:1.9;margin-bottom:2.5rem;">Today, our team of eight passionate artisans crafts thousands of bites each month — but the philosophy remains the same: <em style="color:var(--raspberry);font-style:italic;">every single bite deserves to be extraordinary.</em></p>
+          <div style="display:flex;gap:3rem;">
+            <div>
+              <div class="stat-number" data-count="8">0</div>
+              <div class="stat-label">Years</div>
+            </div>
+            <div>
+              <div class="stat-number" data-count="15000" data-suffix="+">0</div>
+              <div class="stat-label">Bites Made</div>
+            </div>
+            <div>
+              <div class="stat-number" data-count="18">0</div>
+              <div class="stat-label">Flavours</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal-right" style="position:relative;">
+          <img src="https://i.pinimg.com/1200x/2e/46/9e/2e469e7fd0b4ef56c8ac8551b1f04656.jpg" alt="The home kitchen where Whisk and Bite began" style="width:100%;height:540px;object-fit:cover;border-radius:24px;box-shadow:var(--shadow-xl);" loading="lazy"/>
+          <div style="position:absolute;bottom:-2rem;right:-2rem;background:var(--bg-card);border-radius:20px;padding:1.5rem 2rem;box-shadow:var(--shadow-xl);border:1px solid var(--border);max-width:220px;">
+            <div style="font-size:1.8rem;margin-bottom:0.5rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-trophy"></use></svg></div>
+            <div style="font-family:var(--font-display);font-weight:800;font-size:1rem;color:var(--raspberry);margin-bottom:0.3rem;">Award Winning</div>
+            <p style="font-size:0.8rem;color:var(--text-muted);line-height:1.4;">Best Artisan Dessert Studio 2024 & 2025</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════ -->
+  <!-- SECTION 3: OUR VALUES -->
+  <!-- ════════════════════════════ -->
+  <section class="section" style="background:var(--bg-secondary);" aria-labelledby="values-title">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="eyebrow center">What We Stand For</div>
+        <h2 class="section-title" id="values-title">Our <em>Values</em> &<br/>Philosophy</h2>
+        <p class="section-subtitle">Five principles guide everything we create — from the first sketch to the final ribbon tie.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="value-card reveal reveal-delay-1">
+          <div style="width:72px;height:72px;border-radius:50%;background:rgba(184,59,104,0.12);display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 1.5rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-palette"></use></svg></div>
+          <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:0.75rem;">Artisan Craft</h3>
+          <p style="font-size:0.9rem;color:var(--text-muted);line-height:1.7;">Every piece is handmade — no machines, no shortcuts. Pure artisanal dedication in every bite.</p>
+        </div>
+        <div class="value-card reveal reveal-delay-2">
+          <div style="width:72px;height:72px;border-radius:50%;background:rgba(168,185,138,0.2);display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 1.5rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-leaf"></use></svg></div>
+          <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:0.75rem;">Clean Ingredients</h3>
+          <p style="font-size:0.9rem;color:var(--text-muted);line-height:1.7;">We use real, premium, natural ingredients. No artificial flavours, colours, or preservatives — ever.</p>
+        </div>
+        <div class="value-card reveal reveal-delay-3">
+          <div style="width:72px;height:72px;border-radius:50%;background:rgba(214,180,106,0.2);display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 1.5rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-love-letter"></use></svg></div>
+          <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:0.75rem;">Personal Touch</h3>
+          <p style="font-size:0.9rem;color:var(--text-muted);line-height:1.7;">We listen. Every custom order is a collaboration — your vision, our craft, the perfect result.</p>
+        </div>
+        <div class="value-card reveal reveal-delay-4">
+          <div style="width:72px;height:72px;border-radius:50%;background:rgba(243,169,130,0.2);display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 1.5rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-globe"></use></svg></div>
+          <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:0.75rem;">Sustainability</h3>
+          <p style="font-size:0.9rem;color:var(--text-muted);line-height:1.7;">Compostable packaging, local sourcing, minimal waste. Luxury that doesn't cost the planet.</p>
+        </div>
+        <div class="value-card reveal reveal-delay-5">
+          <div style="width:72px;height:72px;border-radius:50%;background:rgba(184,59,104,0.12);display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 1.5rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-sparkles"></use></svg></div>
+          <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:0.75rem;">Premium Experience</h3>
+          <p style="font-size:0.9rem;color:var(--text-muted);line-height:1.7;">From first contact to unboxing — we obsess over every detail of your dessert experience.</p>
+        </div>
+        <div class="value-card reveal reveal-delay-6">
+          <div style="width:72px;height:72px;border-radius:50%;background:rgba(168,185,138,0.2);display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 1.5rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-handshake"></use></svg></div>
+          <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:0.75rem;">Community First</h3>
+          <p style="font-size:0.9rem;color:var(--text-muted);line-height:1.7;">We give back — partnering with local charities and supporting small food businesses in our community.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════ -->
+  <!-- SECTION 4: OUR TIMELINE -->
+  <!-- ════════════════════════════ -->
+  <section class="section" aria-labelledby="timeline-title">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="eyebrow center">Our Journey</div>
+        <h2 class="section-title" id="timeline-title">From <em>Dream</em> to<br/>Delicious Reality</h2>
+      </div>
+
+      <div style="max-width:800px;margin:0 auto;">
+        <!-- Timeline Item 1 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-content" style="text-align:right;">
+            <div class="timeline-year">2018</div>
+            <h4 style="font-weight:700;margin-bottom:0.5rem;">The First Cake Pop</h4>
+            <p style="font-size:0.9rem;color:var(--text-muted);">Amelia makes her first 24 cake pops for a friend's baby shower. They disappear in 10 minutes.</p>
+          </div>
+          <div class="timeline-line">
+            <div class="timeline-dot"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cake-slice"></use></svg></div>
+            <div class="timeline-connector"></div>
+          </div>
+          <div></div>
+        </div>
+
+        <!-- Timeline Item 2 -->
+        <div class="timeline-item reveal reveal-delay-2">
+          <div></div>
+          <div class="timeline-line">
+            <div class="timeline-dot"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-home"></use></svg></div>
+            <div class="timeline-connector"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-year">2020</div>
+            <h4 style="font-weight:700;margin-bottom:0.5rem;">First Studio Space</h4>
+            <p style="font-size:0.9rem;color:var(--text-muted);">Whisk & Bite gets its first professional kitchen studio. Team grows to 3 artisans.</p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 3 -->
+        <div class="timeline-item reveal reveal-delay-3">
+          <div class="timeline-content" style="text-align:right;">
+            <div class="timeline-year">2022</div>
+            <h4 style="font-weight:700;margin-bottom:0.5rem;">Award Recognition</h4>
+            <p style="font-size:0.9rem;color:var(--text-muted);">Named "Best Artisan Dessert Studio" at the City Food Awards. Over 5,000 orders delivered.</p>
+          </div>
+          <div class="timeline-line">
+            <div class="timeline-dot"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-trophy"></use></svg></div>
+            <div class="timeline-connector"></div>
+          </div>
+          <div></div>
+        </div>
+
+        <!-- Timeline Item 4 -->
+        <div class="timeline-item reveal reveal-delay-4">
+          <div></div>
+          <div class="timeline-line">
+            <div class="timeline-dot"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-globe"></use></svg></div>
+            <div class="timeline-connector"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-year">2024</div>
+            <h4 style="font-weight:700;margin-bottom:0.5rem;">National Shipping Launch</h4>
+            <p style="font-size:0.9rem;color:var(--text-muted);">Launched temperature-controlled nationwide shipping. Now serving clients across the country.</p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 5 -->
+        <div class="timeline-item reveal reveal-delay-5">
+          <div class="timeline-content" style="text-align:right;">
+            <div class="timeline-year">2026</div>
+            <h4 style="font-weight:700;margin-bottom:0.5rem;">Today & Beyond</h4>
+            <p style="font-size:0.9rem;color:var(--text-muted);">15,000+ bites crafted, team of 8 artisans, and an entirely new seasonal collection launching soon.</p>
+          </div>
+          <div class="timeline-line">
+            <div class="timeline-dot"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-rocket"></use></svg></div>
+          </div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════ -->
+  <!-- SECTION 5: MEET THE TEAM -->
+  <!-- ════════════════════════════ -->
+  <section class="section" style="background:var(--bg-secondary);" aria-labelledby="team-title">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="eyebrow center">The Artisans</div>
+        <h2 class="section-title" id="team-title">The <em>Talented</em> Hands<br/>Behind Every Bite</h2>
+        <p class="section-subtitle">Our small but mighty team of pastry artists brings years of culinary training and pure passion to every creation.</p>
+      </div>
+
+      <div class="grid-4">
+        <div class="team-card reveal reveal-delay-1" aria-label="Team member Amelia Chen">
+          <div class="team-img-wrap">
+            <img src="https://i.pinimg.com/736x/54/37/cb/5437cb589a736b2bb05e199858972877.jpg" alt="Portrait of Amelia Chen, Founder and Head Chef" style="width:100%;height:100%;object-fit:cover;" loading="lazy"/>
+          </div>
+          <div class="team-body">
+            <h4 style="font-family:var(--font-display);font-size:1.15rem;font-weight:700;margin-bottom:0.25rem;">Amelia Chen</h4>
+            <p style="font-size:0.8rem;color:var(--raspberry);font-weight:700;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:0.75rem;">Founder & Head Chef</p>
+            <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.6;">Trained in Paris & London. 12 years of pastry excellence.</p>
+          </div>
+        </div>
+
+        <div class="team-card reveal reveal-delay-2" aria-label="Team member Kai Torres">
+          <div class="team-img-wrap">
+            <img src="https://i.pinimg.com/736x/68/dc/b9/68dcb9b0c890fbbb39aa4b2dd65003d7.jpg" alt="Portrait of Kai Torres, Chocolate Specialist" style="width:100%;height:100%;object-fit:cover;" loading="lazy"/>
+          </div>
+          <div class="team-body">
+            <h4 style="font-family:var(--font-display);font-size:1.15rem;font-weight:700;margin-bottom:0.25rem;">Kai Torres</h4>
+            <p style="font-size:0.8rem;color:var(--raspberry);font-weight:700;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:0.75rem;">Chocolate Specialist</p>
+            <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.6;">Belgian chocolate expert with a passion for truffles and ganache.</p>
+          </div>
+        </div>
+
+        <div class="team-card reveal reveal-delay-3" aria-label="Team member Maya Rossi">
+          <div class="team-img-wrap">
+            <img src="https://i.pinimg.com/1200x/16/34/66/1634666a108134aa9f7a80adf5ac27da.jpg" alt="Portrait of Maya Rossi, Design Artist" style="width:100%;height:100%;object-fit:cover;" loading="lazy"/>
+          </div>
+          <div class="team-body">
+            <h4 style="font-family:var(--font-display);font-size:1.15rem;font-weight:700;margin-bottom:0.25rem;">Maya Rossi</h4>
+            <p style="font-size:0.8rem;color:var(--raspberry);font-weight:700;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:0.75rem;">Design Artist</p>
+            <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.6;">Trained fine artist who brings edible painting to a new level.</p>
+          </div>
+        </div>
+
+        <div class="team-card reveal reveal-delay-4" aria-label="Team member James Park">
+          <div class="team-img-wrap">
+            <img src="https://i.pinimg.com/736x/42/f4/b2/42f4b2f14e111dfcff42ba924442b4bf.jpg" alt="Portrait of James Park, Cheesecake Artisan" style="width:100%;height:100%;object-fit:cover;" loading="lazy"/>
+          </div>
+          <div class="team-body">
+            <h4 style="font-family:var(--font-display);font-size:1.15rem;font-weight:700;margin-bottom:0.25rem;">James Park</h4>
+            <p style="font-size:0.8rem;color:var(--raspberry);font-weight:700;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:0.75rem;">Cheesecake Artisan</p>
+            <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.6;">The creative mind behind our beloved mini cheesecake collection.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════ -->
+  <!-- SECTION 6: CTA STRIP -->
+  <!-- ════════════════════════════ -->
+  <section style="background:linear-gradient(135deg,var(--raspberry),var(--raspberry-dk));padding:5rem 0;text-align:center;" aria-labelledby="about-cta-title">
+    <div class="container">
+      <div class="reveal">
+        <div class="eyebrow center" style="color:rgba(255,255,255,0.7);">Start Your Order</div>
+        <h2 class="section-title" id="about-cta-title" style="color:white;margin-bottom:1.5rem;">Ready to <em style="color:var(--champagne-lt);">Create</em><br/>Something Sweet?</h2>
+        <p style="color:rgba(255,255,255,0.8);max-width:500px;margin:0 auto 2.5rem;font-size:1.1rem;line-height:1.7;">Tell us your occasion, your flavours, your vision — and we'll craft something extraordinary.</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+          <a href="contact.html" class="btn btn-champagne btn-xl">Start Custom Order</a>
+          <a href="services.html" class="btn btn-ghost btn-xl">View Our Menu</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="../js/icons.js?v=3"></script>
+  <script src="../js/components.js?v=3"></script>
+  <script src="../js/main.js?v=3"></script>
+</body>
+</html>
