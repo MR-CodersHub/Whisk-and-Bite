@@ -1,4 +1,4 @@
-﻿﻿﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr" data-nav="solid" data-theme="light">
 <head>
   <meta charset="UTF-8" />
@@ -15,7 +15,7 @@
   <meta name="theme-color" content="#B83B68" />
   <title>Home 2 | Whisk &amp; Bite — Tiny Treats, Big Moments</title>
   <link rel="icon" href="../images/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="../css/main.css?v=5" />
+  <link rel="stylesheet" href="../css/main.css?v=11" />
   <style>
     /* Unique split-screen hero for Home 2 */
     .h2-hero {
@@ -214,6 +214,9 @@
       .h2-hero-left::after { display: none; }
       .h2-hero-right { height: 50vh; }
       .h2-hero-left { padding: calc(var(--nav-height) + 3rem) 1.5rem 3rem; }
+      /* Stacked hero: CTAs + stats fill the column, so the absolute
+         scroll indicator would land on top of them */
+      .h2-hero-scroll-indicator { display: none; }
       .ingredients-showcase { grid-template-columns: repeat(3, 1fr); grid-template-rows: auto; height: auto; }
       .ingredient-col { height: 200px; }
       .bento-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
@@ -223,6 +226,14 @@
     @media (max-width: 768px) {
       .ingredients-showcase { grid-template-columns: repeat(2, 1fr); }
       .bento-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      #h2-hero-title { font-size: 2.35rem !important; line-height: 1.08; }
+      .h2-hero-left { overflow: hidden; }
+      .h2-hero-left div[style*="inline-flex"] { flex-wrap: wrap; }
+      .h2-hero-left div[style*="gap:2.5rem"] { gap: 1.25rem 2rem !important; flex-wrap: wrap; margin-top: 2rem !important; }
+      .h2-hero-right div[style*="min-width:260px"] { left: 1rem !important; right: 1rem !important; min-width: 0 !important; }
     }
   </style>
 </head>
@@ -544,7 +555,7 @@
 
   <div id="footer-placeholder"></div>
   <script src="../js/icons.js?v=5"></script>
-  <script src="../js/components.js?v=5"></script>
+  <script src="../js/components.js?v=6"></script>
   <script src="../js/main.js?v=5"></script>
 </body>
 </html>

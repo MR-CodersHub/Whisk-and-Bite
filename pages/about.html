@@ -1,4 +1,4 @@
-﻿﻿﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr" data-nav="dark" data-theme="light">
 <head>
   <meta charset="UTF-8" />
@@ -15,7 +15,7 @@
   <meta name="theme-color" content="#B83B68" />
   <title>About Us | Whisk &amp; Bite — Tiny Treats, Big Moments</title>
   <link rel="icon" href="../images/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="../css/main.css?v=5" />
+  <link rel="stylesheet" href="../css/main.css?v=11" />
   <style>
     .about-hero {
       min-height: 70vh;
@@ -26,6 +26,12 @@
       position: relative;
       display: flex;
       align-items: center;
+    }
+
+    @media (max-width: 480px) {
+      .about-hero { min-height: 100svh; padding-top: calc(var(--nav-height) + 2rem); padding-bottom: 3rem; }
+      .about-stats { gap: 1.5rem 2.5rem !important; flex-wrap: wrap; }
+      .about-badge { right: 1rem !important; bottom: 1rem !important; }
     }
 
     .timeline-item {
@@ -163,7 +169,7 @@
           <p style="color:var(--text-muted);line-height:1.9;margin-bottom:1.5rem;">Whisk & Bite began in 2018 in founder <strong>Amelia Chen's</strong> tiny apartment kitchen. Armed with a piping bag and an obsession with Belgian chocolate, she started hand-crafting cake pops for friends' events.</p>
           <p style="color:var(--text-muted);line-height:1.9;margin-bottom:1.5rem;">Word spread quickly. By 2020, Amelia had her first studio space. By 2022, Whisk & Bite was the go-to dessert atelier for luxury weddings and corporate events across the city.</p>
           <p style="color:var(--text-muted);line-height:1.9;margin-bottom:2.5rem;">Today, our team of eight passionate artisans crafts thousands of bites each month — but the philosophy remains the same: <em style="color:var(--raspberry);font-style:italic;">every single bite deserves to be extraordinary.</em></p>
-          <div style="display:flex;gap:3rem;">
+          <div class="about-stats" style="display:flex;gap:3rem;">
             <div>
               <div class="stat-number" data-count="8">0</div>
               <div class="stat-label">Years</div>
@@ -181,7 +187,7 @@
 
         <div class="reveal-right" style="position:relative;">
           <img src="https://i.pinimg.com/1200x/2e/46/9e/2e469e7fd0b4ef56c8ac8551b1f04656.jpg" alt="The home kitchen where Whisk and Bite began" style="width:100%;height:540px;object-fit:cover;border-radius:24px;box-shadow:var(--shadow-xl);" loading="lazy"/>
-          <div style="position:absolute;bottom:-2rem;right:-2rem;background:var(--bg-card);border-radius:20px;padding:1.5rem 2rem;box-shadow:var(--shadow-xl);border:1px solid var(--border);max-width:220px;">
+          <div class="about-badge" style="position:absolute;bottom:-2rem;right:-2rem;background:var(--bg-card);border-radius:20px;padding:1.5rem 2rem;box-shadow:var(--shadow-xl);border:1px solid var(--border);max-width:220px;">
             <div style="font-size:1.8rem;margin-bottom:0.5rem;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-trophy"></use></svg></div>
             <div style="font-family:var(--font-display);font-weight:800;font-size:1rem;color:var(--raspberry);margin-bottom:0.3rem;">Award Winning</div>
             <p style="font-size:0.8rem;color:var(--text-muted);line-height:1.4;">Best Artisan Dessert Studio 2024 & 2025</p>
@@ -398,7 +404,7 @@
 
   <div id="footer-placeholder"></div>
   <script src="../js/icons.js?v=5"></script>
-  <script src="../js/components.js?v=5"></script>
+  <script src="../js/components.js?v=6"></script>
   <script src="../js/main.js?v=5"></script>
 </body>
 </html>

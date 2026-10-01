@@ -1,4 +1,4 @@
-﻿﻿﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr" data-nav="dark" data-theme="light">
 <head>
   <meta charset="UTF-8" />
@@ -15,7 +15,7 @@
   <meta name="theme-color" content="#B83B68" />
   <title>Cookie Policy | Whisk &amp; Bite — Tiny Treats, Big Moments</title>
   <link rel="icon" href="../images/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="../css/main.css?v=5" />
+  <link rel="stylesheet" href="../css/main.css?v=11" />
   <style>
     .policy-hero {
       min-height: 52vh;
@@ -26,6 +26,13 @@
       position: relative;
       overflow: hidden;
       text-align: center;
+    }
+
+    @media (max-width: 480px) {
+      .policy-hero { min-height: 60svh; padding-top: calc(var(--nav-height) + 2rem); padding-bottom: 3rem; }
+      .policy-card { padding: 1.5rem 1rem; }
+      .cookie-table { font-size: 0.8rem; }
+      .cookie-table th, .cookie-table td { padding: 0.6rem; }
     }
 
     .policy-hero::before {
@@ -140,6 +147,7 @@
           <p>Cookies are small text files stored on your device when you visit a website. They help sites remember your preferences and understand how visitors use them. We also use your browser's local storage for the same purpose — it works like a cookie but never leaves your device.</p>
 
           <h2>2. Storage We Use</h2>
+          <div style="overflow-x:auto;">
           <table class="cookie-table" aria-label="Cookies and storage used">
             <thead>
               <tr><th scope="col">Name</th><th scope="col">Purpose</th><th scope="col">Duration</th></tr>
@@ -149,6 +157,7 @@
               <tr><td>Text-direction preference</td><td>Remembers your LTR/RTL choice (browser storage only)</td><td>Until cleared</td></tr>
             </tbody>
           </table>
+          </div>
           <p>That's it — we don't set advertising or tracking cookies ourselves.</p>
 
           <h2>3. Third-Party Content</h2>
@@ -179,7 +188,7 @@
 
   <div id="footer-placeholder"></div>
   <script src="../js/icons.js?v=5"></script>
-  <script src="../js/components.js?v=5"></script>
+  <script src="../js/components.js?v=6"></script>
   <script src="../js/main.js?v=5"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-﻿﻿﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr" data-nav="dark" data-theme="light">
 <head>
   <meta charset="UTF-8" />
@@ -15,7 +15,7 @@
   <meta name="theme-color" content="#B83B68" />
   <title>Whisk &amp; Bite — Tiny Treats, Big Moments</title>
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="css/main.css?v=5" />
+  <link rel="stylesheet" href="css/main.css?v=11" />
 </head>
 <body>
 
@@ -33,12 +33,12 @@
         <div class="hero-slide-bg" style="background-image: url('images/hero-cake-pops.jpg');"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-          <p class="hero-eyebrow">✦ Premium Artisan Desserts</p>
+          <p class="hero-eyebrow"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"></use></svg> Premium Artisan Desserts</p>
           <h1 class="hero-title">Bite-Sized<br/><em>Moments of</em><br/>Pure Joy</h1>
           <p class="hero-subtitle">Handcrafted cake pops, truffles & dessert bites made with passion, premium ingredients, and an eye for beauty.</p>
           <div class="hero-actions">
             <a href="pages/services.html" class="btn btn-primary btn-xl">Explore Our Bites <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cake-slice"></use></svg></a>
-            <a href="pages/contact.html" class="btn btn-ghost btn-xl">Custom Order ✦</a>
+            <a href="pages/contact.html" class="btn btn-ghost btn-xl">Custom Order <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"></use></svg></a>
           </div>
         </div>
       </div>
@@ -48,7 +48,7 @@
         <div class="hero-slide-bg" style="background-image: url('images/wedding-dessert-table.jpg');"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-          <p class="hero-eyebrow">✦ Celebrate in Style</p>
+          <p class="hero-eyebrow"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"></use></svg> Celebrate in Style</p>
           <h1 class="hero-title"><em>Your</em> Dream<br/>Dessert Table<br/>Awaits</h1>
           <p class="hero-subtitle">Elevate your wedding, birthday or corporate event with stunning bespoke dessert displays.</p>
           <div class="hero-actions">
@@ -63,7 +63,7 @@
         <div class="hero-slide-bg" style="background-image: url('images/party-dessert-box.jpg');"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-          <p class="hero-eyebrow">✦ Gift Something Extraordinary</p>
+          <p class="hero-eyebrow"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"></use></svg> Gift Something Extraordinary</p>
           <h1 class="hero-title">The Most<br/><em>Indulgent</em><br/>Gift Box</h1>
           <p class="hero-subtitle">Luxurious dessert gift boxes curated with our finest bites — the perfect present for someone special.</p>
           <div class="hero-actions">
@@ -76,8 +76,8 @@
 
     <!-- Slider Controls -->
     <div class="slider-arrows" aria-label="Slider navigation">
-      <button class="slider-arrow slider-prev" aria-label="Previous slide">‹</button>
-      <button class="slider-arrow slider-next" aria-label="Next slide">›</button>
+      <button class="slider-arrow slider-prev" aria-label="Previous slide"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-left"></use></svg></button>
+      <button class="slider-arrow slider-next" aria-label="Next slide"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg></button>
     </div>
     <div class="slider-dots" role="tablist" aria-label="Slide indicators">
       <button class="slider-dot active" role="tab" aria-label="Go to slide 1" aria-selected="true"></button>
@@ -86,9 +86,9 @@
     </div>
 
     <!-- Scroll hint -->
-    <div style="position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:0.5rem;animation:float 2s ease-in-out infinite;">
+    <div class="scroll-hint" aria-hidden="true" style="position:absolute;bottom:4.5rem;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:0.5rem;animation:float 2s ease-in-out infinite;">
       <span style="font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.6);">Scroll</span>
-      <span style="color:rgba(255,255,255,0.6);font-size:1.2rem;">↓</span>
+      <span style="color:rgba(255,255,255,0.6);font-size:1.2rem;line-height:1;"><svg class="icon" aria-hidden="true" focusable="false" style="transform:rotate(90deg);"><use href="#i-arrow-right"></use></svg></span>
     </div>
   </section>
 
@@ -554,7 +554,7 @@
 
   <!-- Scripts -->
   <script src="js/icons.js?v=5"></script>
-  <script src="js/components.js?v=5"></script>
+  <script src="js/components.js?v=6"></script>
   <script src="js/main.js?v=5"></script>
 </body>
 </html>

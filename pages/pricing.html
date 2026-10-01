@@ -1,4 +1,4 @@
-﻿﻿﻿﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr" data-nav="dark" data-theme="light">
 <head>
   <meta charset="UTF-8" />
@@ -15,7 +15,7 @@
   <meta name="theme-color" content="#B83B68" />
   <title>Pricing | Whisk &amp; Bite — Tiny Treats, Big Moments</title>
   <link rel="icon" href="../images/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="../css/main.css?v=5" />
+  <link rel="stylesheet" href="../css/main.css?v=11" />
   <style>
     .pricing-hero {
       min-height: 88vh;
@@ -26,6 +26,10 @@
       position: relative;
       overflow: hidden;
       text-align: center;
+    }
+
+    @media (max-width: 480px) {
+      .pricing-hero { min-height: 100svh; padding-top: calc(var(--nav-height) + 2rem); padding-bottom: 3rem; }
     }
 
     .pricing-hero::after {
@@ -145,6 +149,12 @@
     @media (max-width: 768px) {
       .comparison-table { font-size: 0.8rem; }
       .comparison-table th, .comparison-table td { padding: 0.75rem; }
+    }
+
+    @media (max-width: 480px) {
+      .comparison-table th, .comparison-table td { padding: 0.6rem; font-size: 0.75rem; }
+      .addon-card { padding: 1.25rem; }
+      .addon-card > *:last-child { min-width: 0; }
     }
   </style>
 </head>
@@ -525,7 +535,7 @@
 
   <div id="footer-placeholder"></div>
   <script src="../js/icons.js?v=5"></script>
-  <script src="../js/components.js?v=5"></script>
+  <script src="../js/components.js?v=6"></script>
   <script src="../js/main.js?v=5"></script>
   <script>
     // Price toggle functionality

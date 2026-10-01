@@ -225,7 +225,7 @@ const Components = {
           <form style="margin-top:1.5rem;" id="newsletter-form" novalidate>
             <label for="newsletter-email" style="display:block;font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--champagne);margin-bottom:0.5rem;">Newsletter</label>
             <div style="display:flex;gap:0.5rem;">
-              <input type="email" id="newsletter-email" name="email" placeholder="Your email" style="flex:1;padding:0.75rem 1rem;border-radius:9999px;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.08);color:white;font-family:var(--font-body);font-size:0.875rem;outline:none;" required />
+              <input type="email" id="newsletter-email" name="email" placeholder="Your email" style="flex:1;min-width:0;padding:0.75rem 1rem;border-radius:9999px;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.08);color:white;font-family:var(--font-body);font-size:0.875rem;outline:none;" required />
               <button type="submit" class="btn btn-champagne btn-sm" style="white-space:nowrap;" aria-label="Subscribe">✓</button>
             </div>
           </form>

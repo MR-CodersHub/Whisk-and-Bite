@@ -1,4 +1,4 @@
-﻿﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr" data-nav="solid" data-theme="light">
 <head>
   <meta charset="UTF-8" />
@@ -15,13 +15,19 @@
   <meta name="theme-color" content="#B83B68" />
   <title>Chocolate Flavour Pairing Guide | Whisk &amp; Bite — Tiny Treats, Big Moments</title>
   <link rel="icon" href="../images/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="../css/main.css?v=5" />
+  <link rel="stylesheet" href="../css/main.css?v=11" />
   <style>
     .article-hero {
       height: 70vh;
       min-height: 480px;
       position: relative;
       overflow: hidden;
+    }
+
+    @media (max-width: 480px) {
+      /* Let the hero grow with its content instead of spilling over */
+      .article-hero { height: auto; min-height: 480px; }
+      .article-hero .container { padding-top: calc(var(--nav-height) + 2rem); }
     }
 
     .article-body {
@@ -411,7 +417,7 @@
 
   <div id="footer-placeholder"></div>
   <script src="../js/icons.js?v=5"></script>
-  <script src="../js/components.js?v=5"></script>
+  <script src="../js/components.js?v=6"></script>
   <script src="../js/main.js?v=5"></script>
   <script src="../js/blog-posts.js?v=5"></script>
   <script src="../js/blog-posts-2.js?v=5"></script>

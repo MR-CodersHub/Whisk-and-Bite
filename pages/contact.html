@@ -1,4 +1,4 @@
-﻿﻿﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr" data-nav="dark" data-theme="light">
 <head>
   <meta charset="UTF-8" />
@@ -15,7 +15,7 @@
   <meta name="theme-color" content="#B83B68" />
   <title>Contact Us | Whisk &amp; Bite — Tiny Treats, Big Moments</title>
   <link rel="icon" href="../images/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="../css/main.css?v=5" />
+  <link rel="stylesheet" href="../css/main.css?v=11" />
   <style>
     .contact-hero {
       min-height: 88vh;
@@ -25,6 +25,13 @@
       background: url('https://i.pinimg.com/736x/09/b4/d5/09b4d5e6127238300ed228684d9eb2cf.jpg') center / cover no-repeat;
       position: relative;
       overflow: hidden;
+    }
+
+    @media (max-width: 480px) {
+      .contact-hero { min-height: 100svh; padding-top: calc(var(--nav-height) + 2rem); padding-bottom: 3rem; }
+      .contact-hero-grid { gap: 2rem; }
+      .contact-hero .glass { padding: 1.25rem !important; }
+      .contact-hero .glass a { overflow-wrap: anywhere; }
     }
 
     .contact-hero::before {
@@ -587,7 +594,7 @@
 
   <div id="footer-placeholder"></div>
   <script src="../js/icons.js?v=5"></script>
-  <script src="../js/components.js?v=5"></script>
+  <script src="../js/components.js?v=6"></script>
   <script src="../js/main.js?v=5"></script>
 </body>
 </html>

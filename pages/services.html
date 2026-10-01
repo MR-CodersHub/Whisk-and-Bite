@@ -1,4 +1,4 @@
-﻿﻿﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr" data-nav="dark" data-theme="light">
 <head>
   <meta charset="UTF-8" />
@@ -15,7 +15,7 @@
   <meta name="theme-color" content="#B83B68" />
   <title>Services | Whisk &amp; Bite — Tiny Treats, Big Moments</title>
   <link rel="icon" href="../images/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="../css/main.css?v=5" />
+  <link rel="stylesheet" href="../css/main.css?v=11" />
   <style>
     .services-hero {
       min-height: 88vh;
@@ -25,6 +25,10 @@
       background: url('https://i.pinimg.com/1200x/ab/bb/3e/abbb3eef0e64fd5f3a6607e93d5fa613.jpg') center / cover no-repeat;
       position: relative;
       overflow: hidden;
+    }
+
+    @media (max-width: 480px) {
+      .services-hero { min-height: 100svh; padding-top: calc(var(--nav-height) + 2rem); padding-bottom: 3rem; }
     }
 
     .services-hero::after {
@@ -506,7 +510,7 @@
 
   <div id="footer-placeholder"></div>
   <script src="../js/icons.js?v=5"></script>
-  <script src="../js/components.js?v=5"></script>
+  <script src="../js/components.js?v=6"></script>
   <script src="../js/main.js?v=5"></script>
 </body>
 </html>

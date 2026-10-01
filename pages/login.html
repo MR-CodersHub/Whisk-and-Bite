@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr" data-nav="solid" data-theme="light">
 <head>
   <meta charset="UTF-8" />
@@ -15,7 +15,7 @@
   <meta name="theme-color" content="#B83B68" />
   <title>Login / Register | Whisk &amp; Bite — Tiny Treats, Big Moments</title>
   <link rel="icon" href="../images/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="../css/main.css?v=5" />
+  <link rel="stylesheet" href="../css/main.css?v=11" />
   <style>
     /* Login brand bar: logo hidden here (form has its own centered
        logo) — toggles pill only, overlaid so the side image starts
@@ -28,6 +28,7 @@
       .brandbar .logo-tagline { font-size: 0.6rem; letter-spacing: 0.15em; }
       .brandbar-actions { padding: 0.2rem 0.3rem; }
       .brandbar-actions .ctrl-btn { width: 30px; height: 30px; font-size: 0.75rem; }
+      .brandbar-actions .ctrl-btn-text { min-width: 30px; max-width: 30px; flex-basis: 30px; font-size: 0.55rem; }
     }
     .brandbar {
       /* Logo lockup + pill grouped above the form (right side) */
@@ -93,6 +94,10 @@
       width: 100%;
       max-width: 420px;
     }
+
+    /* Password fields carry an absolute eye-toggle — keep typed
+       text clear of it on every viewport */
+    .auth-form-wrapper input[type="password"] { padding-right: 3rem; }
 
     .tab-switcher {
       display: flex;
@@ -204,6 +209,12 @@
       }
     }
 
+    @media (max-width: 1024px) {
+      /* Tablet + mobile: the panel narrows, so submit buttons slim
+         down to keep their label on one line */
+      .auth-form-wrapper .btn-lg { padding: 1rem 1.5rem; font-size: 0.9rem; }
+    }
+
       @media (max-width: 768px) {
       /* Stacked layout: brand bar becomes a normal row so it
          never floats over the form */
@@ -216,6 +227,16 @@
       .auth-page { grid-template-columns: 1fr; }
       .auth-visual { display: none; }
       .auth-panel { padding: 2rem 1.5rem 3rem; }
+    }
+
+    @media (max-width: 480px) {
+      .tab-btn { padding: 0.625rem 0.25rem; font-size: 0.7rem; letter-spacing: 0.02em; }
+      .social-auth-btn { padding: 0.875rem 1rem; font-size: 0.8rem; }
+      .auth-form-wrapper .btn-lg { padding: 1rem; font-size: 0.8rem; letter-spacing: 0.04em; }
+    }
+
+    @media (max-width: 380px) {
+      .auth-panel { padding: 1.5rem 1rem 2.5rem; }
     }
   </style>
 </head>
@@ -314,7 +335,7 @@
               <label for="remember-me" style="font-size:0.875rem;color:var(--text-muted);cursor:pointer;">Remember me for 30 days</label>
             </div>
 
-            <button type="submit" class="btn btn-primary btn-lg w-full" style="justify-content:center;">Sign In to My Account →</button>
+            <button type="submit" class="btn btn-primary btn-lg w-full" style="justify-content:center;">Sign In to My Account <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg></button>
           </form>
 
           <p style="text-align:center;margin-top:1.5rem;font-size:0.875rem;color:var(--text-muted);">Don't have an account? <a href="#" onclick="switchTab('register');return false;" style="color:var(--raspberry);font-weight:700;">Create one free</a></p>
@@ -371,7 +392,7 @@
 
   <script src="../js/icons.js?v=5"></script>
 
-  <script src="../js/components.js?v=5"></script>
+  <script src="../js/components.js?v=6"></script>
   <script src="../js/main.js?v=5"></script>
   <script>
     function switchTab(tab) {
