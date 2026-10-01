@@ -1533,7 +1533,10 @@ select.form-control {
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .nav-links { display: none; }
   .nav-actions .btn:not(.btn-icon) { display: none; }
-  .hamburger { display: flex; }
+  /* Pack toggles tight against the hamburger (space-between
+     would strand them mid-bar once the links hide) */
+  .nav-actions { margin-left: auto; }
+  .hamburger { display: flex; margin-left: var(--sp-2); }
 }
 
 @media (max-width: 768px) {
